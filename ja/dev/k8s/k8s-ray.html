@@ -1,0 +1,1910 @@
+
+<!DOCTYPE HTML>
+<html lang="ja" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>Ray の利用 · HonKit</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="HonKit 3.6.6">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../../../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../../../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../../../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="k8s-embedding.html" />
+    
+    
+    <link rel="prev" href="k8s-kibana.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="検索ワードを入力" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        <li class="header">目次</li>
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../../">
+            
+                <a href="../../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../../onboarding/">
+            
+                <a href="../../onboarding/">
+            
+                    
+                    オンボーディング
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="../../onboarding/getting-started.html">
+            
+                <a href="../../onboarding/getting-started.html">
+            
+                    
+                    研究室への配属が決まったら
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../../research/">
+            
+                <a href="../../research/">
+            
+                    
+                    研究スキル
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="../../research/files-and-data.html">
+            
+                <a href="../../research/files-and-data.html">
+            
+                    
+                    ファイルやデータの整理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="../../research/time-management/a-week.html">
+            
+                <a href="../../research/time-management/a-week.html">
+            
+                    
+                    １週間の流れ
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3" data-path="../../research/time-management/phd.html">
+            
+                <a href="../../research/time-management/phd.html">
+            
+                    
+                    博士後期課程
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4" data-path="../../research/task-management/wbs.html">
+            
+                <a href="../../research/task-management/wbs.html">
+            
+                    
+                    WBS（Work Breakdown Structure）
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.5" data-path="../../research/presentation-with-marp.html">
+            
+                <a href="../../research/presentation-with-marp.html">
+            
+                    
+                    Marp を使った発表スライドの作成
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.6" data-path="../../research/writing-with-asciidoctor.html">
+            
+                <a href="../../research/writing-with-asciidoctor.html">
+            
+                    
+                    Asciidoctor を使った論文執筆
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.7" data-path="../../research/affinity-diagram.html">
+            
+                <a href="../../research/affinity-diagram.html">
+            
+                    
+                    KJ 法による思考の整理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.8" data-path="../../research/affinity-diagram-with-trello.html">
+            
+                <a href="../../research/affinity-diagram-with-trello.html">
+            
+                    
+                    Trello を使った KJ 法
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    開発スキル
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" >
+            
+                <span>
+            
+                    
+                    PC の設定
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1.1" >
+            
+                <span>
+            
+                    
+                    環境：ThinkPad E シリーズ・Windows 10 Enterprise・US 配列
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1.1.1" data-path="../pc-initial-setup.html">
+            
+                <a href="../pc-initial-setup.html">
+            
+                    
+                    PC の初期設定
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.1.2" data-path="../pc-advanced-settings.html">
+            
+                <a href="../pc-advanced-settings.html">
+            
+                    
+                    PC の詳細設定
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.1.3" data-path="../pc-essential-apps.html">
+            
+                <a href="../pc-essential-apps.html">
+            
+                    
+                    必須アプリのインストール
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.1.4" data-path="../pc-advanced-apps.html">
+            
+                <a href="../pc-advanced-apps.html">
+            
+                    
+                    個別アプリのインストール
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.1.5" data-path="../pc-uninstall.html">
+            
+                <a href="../pc-uninstall.html">
+            
+                    
+                    アプリのアンインストール（削除）
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.1.6" data-path="../pc-reset.html">
+            
+                <a href="../pc-reset.html">
+            
+                    
+                    PC の初期化
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.1.7" data-path="../pc-win10.html">
+            
+                <a href="../pc-win10.html">
+            
+                    
+                    Windows10 のインストール
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.2" >
+            
+                <span>
+            
+                    
+                    環境：ThinkPad E シリーズ・Ubuntu 18.04 LTS・US 配列
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1.2.1" data-path="../pc-win10-installer-on-ubuntu.html">
+            
+                <a href="../pc-win10-installer-on-ubuntu.html">
+            
+                    
+                    Windows10 用 USB インストーラーの作成
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    研究室クラスターの使い方
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.2.1" data-path="README-notebook.html">
+            
+                <a href="README-notebook.html">
+            
+                    
+                    研究室クラスターについて
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.2" data-path="README-data.html">
+            
+                <a href="README-data.html">
+            
+                    
+                    研究室クラスターのファイルやデータについて
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.3" data-path="README-index.html">
+            
+                <a href="README-index.html">
+            
+                    
+                    目的別研究室クラスター使用手順
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.2.3.1" >
+            
+                <span>
+            
+                    
+                    目的別手順
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.2.3.1.1" data-path="k8s-linux-commands.html">
+            
+                <a href="k8s-linux-commands.html">
+            
+                    
+                    Jupyter Notebook Linux コマンド集
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.3.1.2" data-path="k8s-linux-commands-terminal.html">
+            
+                <a href="k8s-linux-commands-terminal.html">
+            
+                    
+                    Jupyter Lab Terminal Linux コマンド集
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.3.1.3" data-path="k8s-mysql.html">
+            
+                <a href="k8s-mysql.html">
+            
+                    
+                    MySQL データベースの利用
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.3.1.4" data-path="k8s-elasticsearch.html">
+            
+                <a href="k8s-elasticsearch.html">
+            
+                    
+                    Elasticsearch の利用
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.3.1.5" data-path="k8s-kibana.html">
+            
+                <a href="k8s-kibana.html">
+            
+                    
+                    Kibana の利用
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.4.2.3.1.6" data-path="k8s-ray.html">
+            
+                <a href="k8s-ray.html">
+            
+                    
+                    Ray の利用
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.3.1.7" data-path="k8s-embedding.html">
+            
+                <a href="k8s-embedding.html">
+            
+                    
+                    分散表現の取得
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.3.1.8" data-path="k8s-transformers.html">
+            
+                <a href="k8s-transformers.html">
+            
+                    
+                    汎用言語表現モデルの利用
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.3.1.9" data-path="k8s-dotnet.html">
+            
+                <a href="k8s-dotnet.html">
+            
+                    
+                    .NET 環境の利用
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3" >
+            
+                <span>
+            
+                    
+                    Python と Jupyter Lab
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.3.1" data-path="../pc-python.html">
+            
+                <a href="../pc-python.html">
+            
+                    
+                    Python のインストール
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3.2" data-path="../pc-jupyterlab.html">
+            
+                <a href="../pc-jupyterlab.html">
+            
+                    
+                    Jupyter Lab の使い方
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4" >
+            
+                <span>
+            
+                    
+                    仮想マシン
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.4.1" >
+            
+                <span>
+            
+                    
+                    必要台数：1 台の場合
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.4.1.1" data-path="../../pc-wsl-2.md">
+            
+                <span>
+            
+                    
+                    Windows Subsystem for Linux 2 (dev/WSL-2)のインストール
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4.1.2" data-path="../vm-install-apps.html">
+            
+                <a href="../vm-install-apps.html">
+            
+                    
+                    仮想マシンにアプリをインストールする方法
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4.2" >
+            
+                <span>
+            
+                    
+                    必要台数：2 台以上の場合
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.4.2.1" data-path="../pc-virtualbox-vagrant.html">
+            
+                <a href="../pc-virtualbox-vagrant.html">
+            
+                    
+                    VirtualBox と Vagrant のインストール
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4.2.2" data-path="../vm-ubuntu1804.html">
+            
+                <a href="../vm-ubuntu1804.html">
+            
+                    
+                    Ubuntu 18.04 LTS を使った仮想マシンの作成
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4.2.3" data-path="../vm-centos7.html">
+            
+                <a href="../vm-centos7.html">
+            
+                    
+                    CentOS 7 を使った仮想マシンの作成
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4.2.4" data-path="../vm-centos7-ek.html">
+            
+                <a href="../vm-centos7-ek.html">
+            
+                    
+                    CentOS 7 + Elasticsearch + Kibana を持つ仮想マシンの作成
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4.2.5" data-path="../vm-install-apps.html">
+            
+                <a href="../vm-install-apps.html">
+            
+                    
+                    仮想マシンにアプリをインストールする方法
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.5" >
+            
+                <span>
+            
+                    
+                    チャットボット
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.5.1" data-path="../pc-python.html">
+            
+                <a href="../pc-python.html">
+            
+                    
+                    Python のインストール
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.5.2" data-path="../pc-slack.html">
+            
+                <a href="../pc-slack.html">
+            
+                    
+                    Slack のインストールと研究室ワークスペースへの参加
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.5.3" data-path="../pc-ngrok.html">
+            
+                <a href="../pc-ngrok.html">
+            
+                    
+                    grok のインストール
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.5.4" data-path="../chatbot-slack-1.html">
+            
+                <a href="../chatbot-slack-1.html">
+            
+                    
+                    チャットボットの開発
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.6" >
+            
+                <span>
+            
+                    
+                    ウェブクローラーの取り扱い
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.6.1" data-path="../web-crawler.html">
+            
+                <a href="../web-crawler.html">
+            
+                    
+                    ウェブクローラーとユーザエージェント
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.7" >
+            
+                <span>
+            
+                    
+                    ウェブアプリ開発と Heroku へのデプロイ
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.7.1" data-path="../pc-git.html">
+            
+                <a href="../pc-git.html">
+            
+                    
+                    Git のインストール
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.7.2" data-path="../pc-python.html">
+            
+                <a href="../pc-python.html">
+            
+                    
+                    Python のインストール
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.7.3" data-path="../pc-postgresql.html">
+            
+                <a href="../pc-postgresql.html">
+            
+                    
+                    PostgreSQL のインストール
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.7.4" data-path="../webapp-flask.html">
+            
+                <a href="../webapp-flask.html">
+            
+                    
+                    Flask を使ったウェブアプリ開発
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.7.5" data-path="../pc-heroku.html">
+            
+                <a href="../pc-heroku.html">
+            
+                    
+                    Heroku へのデプロイ
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.8" >
+            
+                <span>
+            
+                    
+                    Java アプリ開発環境
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.8.1" data-path="../pc-java.html">
+            
+                <a href="../pc-java.html">
+            
+                    
+                    Java と開発ツールのインストール
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.8.2" data-path="../github-1.html">
+            
+                <a href="../github-1.html">
+            
+                    
+                    GitHub を使った開発 1
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.8.3" data-path="../solr-server.html">
+            
+                <a href="../solr-server.html">
+            
+                    
+                    Solr サーバの開発
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.9" >
+            
+                <span>
+            
+                    
+                    Azure Cognitive Services クライアント開発
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.9.1" data-path="../acs-resource.html">
+            
+                <a href="../acs-resource.html">
+            
+                    
+                    リソースの取得
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.9.2" data-path="../acs-bingwebsearch.html">
+            
+                <a href="../acs-bingwebsearch.html">
+            
+                    
+                    Bing 検索 API
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.10" data-path="../searchengine/">
+            
+                <a href="../searchengine/">
+            
+                    
+                    サーチエンジン開発
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.10.1" data-path="../searchengine/">
+            
+                <a href="../searchengine/#bing-search">
+            
+                    
+                    Bing Search
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.10.1.1" data-path="../searchengine/bing/1-install.html">
+            
+                <a href="../searchengine/bing/1-install.html">
+            
+                    
+                    システムのインストールと基本利用
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.10.1.1.1" data-path="../acs-bingsearch-python.html">
+            
+                <a href="../acs-bingsearch-python.html">
+            
+                    
+                    多機能版APIクライアントサーバ
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.10.1.2" >
+            
+                <span>
+            
+                    
+                    クライアント開発
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.10.1.2.1" >
+            
+                <span>
+            
+                    
+                    Web UI
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.10.1.2.1.1" data-path="../searchengine/bing/2-client-python.html">
+            
+                <a href="../searchengine/bing/2-client-python.html">
+            
+                    
+                    Python
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.10.1.2.2" >
+            
+                <span>
+            
+                    
+                    チャットボット
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.10.1.2.2.1" data-path="../searchengine/bing/2-client-bot.html">
+            
+                <a href="../searchengine/bing/2-client-bot.html">
+            
+                    
+                    Bot Framework
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.10.1.3" >
+            
+                <span>
+            
+                    
+                    研究室クラスターへのデプロイ
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.10.1.3.1" data-path="../searchengine/bing/3-k8s.html">
+            
+                <a href="../searchengine/bing/3-k8s.html">
+            
+                    
+                    デプロイ
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.10.2" data-path="../searchengine/">
+            
+                <a href="../searchengine/#lucene">
+            
+                    
+                    Lucene
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.10.2.1" data-path="../searchengine/lucene/1-install.html">
+            
+                <a href="../searchengine/lucene/1-install.html">
+            
+                    
+                    システムのインストールと基本利用
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.10.2.2" data-path="../searchengine/lucene/3-compile.html">
+            
+                <a href="../searchengine/lucene/3-compile.html">
+            
+                    
+                    ソースファイルのコンパイル
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.10.2.3" >
+            
+                <span>
+            
+                    
+                    研究室クラスターでの開発
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.10.2.3.1" data-path="../searchengine/lucene/3-compile-k8s.html">
+            
+                <a href="../searchengine/lucene/3-compile-k8s.html">
+            
+                    
+                    ソースファイルのコンパイル
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.10.3" data-path="../searchengine/">
+            
+                <a href="../searchengine/#solr">
+            
+                    
+                    Solr
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.10.3.1" >
+            
+                <span>
+            
+                    
+                    研究室クラスターでの開発
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.10.3.1.1" data-path="../searchengine/solr/3-compile-k8s.html">
+            
+                <a href="../searchengine/solr/3-compile-k8s.html">
+            
+                    
+                    ソースファイルのコンパイル
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.10.4" data-path="../searchengine/">
+            
+                <a href="../searchengine/#elasticsearch">
+            
+                    
+                    Elastic Search
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.10.4.1" data-path="../searchengine/elasticsearch/1-install.html">
+            
+                <a href="../searchengine/elasticsearch/1-install.html">
+            
+                    
+                    システムのインストールと基本利用
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.10.5" data-path="../searchengine/">
+            
+                <a href="../searchengine/#fess">
+            
+                    
+                    FESS
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.10.6" data-path="../searchengine/">
+            
+                <a href="../searchengine/#anserini">
+            
+                    
+                    Anserini
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="../../faq/faq-dev.html">
+            
+                <a href="../../faq/faq-dev.html">
+            
+                    
+                    FAQ
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="../../lifehack/">
+            
+                <a href="../../lifehack/">
+            
+                    
+                    ライフハック
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="../../check/">
+            
+                <a href="../../check/">
+            
+                    
+                    チェックリスト
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" data-path="../../templates/">
+            
+                <a href="../../templates/">
+            
+                    
+                    テンプレート
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.8.1" data-path="../../templates/seminar-note.html">
+            
+                <a href="../../templates/seminar-note.html">
+            
+                    
+                    ゼミノート
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.8.1.1" data-path="../../templates/gantt-chart.html">
+            
+                <a href="../../templates/gantt-chart.html">
+            
+                    
+                    ガントチャート
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.2" data-path="../../templates/review-note.html">
+            
+                <a href="../../templates/review-note.html">
+            
+                    
+                    文献レビューノート
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.3" data-path="../../templates/lab-note.html">
+            
+                <a href="../../templates/lab-note.html">
+            
+                    
+                    ラボノート
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.4" data-path="../../templates/marp-lab/presentation.html">
+            
+                <a href="../../templates/marp-lab/presentation.html">
+            
+                    
+                    プレゼンテーション
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.5" data-path="../../templates/asciidoctor-thesis/">
+            
+                <a href="../../templates/asciidoctor-thesis/">
+            
+                    
+                    卒論・修論原稿
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.6" data-path="../../faq/">
+            
+                <a href="../../faq/">
+            
+                    
+                    よくある質問
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://github.com/honkit/honkit" target="blank" class="gitbook-link">
+            HonKitで公開 
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../.." >Ray の利用</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="ray">Ray</h1>
+<p>:bulb: <a href="https://docs.ray.io/en/latest/index.html" target="_blank">Ray</a>&#x306F;&#x6DF1;&#x5C64;&#x5B66;&#x7FD2;&#x30D7;&#x30ED;&#x30BB;&#x30B9;&#x3092;Kubernetes&#x30AF;&#x30E9;&#x30B9;&#x30BF;&#x30FC;&#x4E0A;&#x3067;&#x5206;&#x6563;&#x51E6;&#x7406;&#x3059;&#x308B;&#x30DF;&#x30C9;&#x30EB;&#x30A6;&#x30A7;&#x30A2;&#x3067;&#x3059;&#x3002;</p>
+<h2 id="&#x524D;&#x63D0;">&#x524D;&#x63D0;</h2>
+<ul>
+<li>&#x6307;&#x5C0E;&#x6559;&#x54E1;&#x306B;<code>kubectl</code>&#x306E;&#x30B3;&#x30F3;&#x30D5;&#x30A3;&#x30B0;&#x30D5;&#x30A1;&#x30A4;&#x30EB;&#x4F5C;&#x6210;&#x3092;&#x4F9D;&#x983C;<ul>
+<li><code>sNNNNNNN-k8s-config</code></li>
+</ul>
+</li>
+<li>Jupyter Notebook&#x30A4;&#x30E1;&#x30FC;&#x30B8;<ul>
+<li><code>hideojoho/jupyter-kubectl</code>&#x3092;&#x9078;&#x629E;</li>
+</ul>
+</li>
+</ul>
+<h2 id="kubectl&#x306E;&#x6E96;&#x5099;&#xFF08;&#x65B0;&#x898F;&#x30CE;&#x30FC;&#x30C8;&#x30D6;&#x30C3;&#x30AF;&#x30B5;&#x30FC;&#x30D0;&#x8D77;&#x52D5;&#x6642;&#x306B;&#x6BCE;&#x56DE;&#x5B9F;&#x884C;&#xFF09;"><code>kubectl</code>&#x306E;&#x6E96;&#x5099;&#xFF08;&#x65B0;&#x898F;&#x30CE;&#x30FC;&#x30C8;&#x30D6;&#x30C3;&#x30AF;&#x30B5;&#x30FC;&#x30D0;&#x8D77;&#x52D5;&#x6642;&#x306B;&#x6BCE;&#x56DE;&#x5B9F;&#x884C;&#xFF09;</h2>
+<p>&#x4EE5;&#x4E0B;&#x306E;&#x51E6;&#x7406;&#x306F;&#x3001;Jupyter Lab&#x4E0A;&#x306E;&#x30BF;&#x30FC;&#x30DF;&#x30CA;&#x30EB;&#x304B;&#x3089;&#x5B9F;&#x884C;</p>
+<pre><code>$ mkdir ~/.kube
+$ cp ~/shared/Datasets/k8s/certs/sNNNNNNN-k8s-config ~/.kube/config
+</code></pre><ul>
+<li>&#x30B3;&#x30F3;&#x30D5;&#x30A3;&#x30B0;&#x30D5;&#x30A1;&#x30A4;&#x30EB;&#x306E;&#x52D5;&#x4F5C;&#x78BA;&#x8A8D;<pre><code>$ kubectl get all
+No resources found in sNNNNNNN namespace.
+</code></pre></li>
+</ul>
+<h2 id="&#x4F5C;&#x696D;&#x7528;&#x30D5;&#x30A9;&#x30EB;&#x30C0;&#x306E;&#x4F5C;&#x6210;">&#x4F5C;&#x696D;&#x7528;&#x30D5;&#x30A9;&#x30EB;&#x30C0;&#x306E;&#x4F5C;&#x6210;</h2>
+<pre><code>$ mkdir playground/projects/sNNNNNNN/my-ray
+</code></pre><ul>
+<li>&#x30CE;&#x30FC;&#x30C8;&#x30D6;&#x30C3;&#x30AF;&#x306E;&#x4F5C;&#x6210;<ul>
+<li>&#x5DE6;&#x30D1;&#x30CD;&#x30EB;&#x3067;<code>playground/projects/sNNNNNNN/my-ray</code>&#x306B;&#x79FB;&#x52D5;&#x3057;&#x305F;&#x5F8C;&#x3001;&#x30CE;&#x30FC;&#x30C8;&#x30D6;&#x30C3;&#x30AF;&#x3092;&#x65B0;&#x898F;&#x4F5C;&#x6210;</li>
+</ul>
+</li>
+</ul>
+<h2 id="ray&#x8A2D;&#x5B9A;&#x30D5;&#x30A1;&#x30A4;&#x30EB;">Ray&#x8A2D;&#x5B9A;&#x30D5;&#x30A1;&#x30A4;&#x30EB;</h2>
+<p>&#x4EE5;&#x4E0B;&#x306E;&#x51E6;&#x7406;&#x306F;&#x3001;Jupyter Lab&#x4E0A;&#x306E;<code>playground/projects/sNNNNNNN/my-ray</code>&#x30D5;&#x30A9;&#x30EB;&#x30C0;&#x306B;&#x65B0;&#x898F;&#x4F5C;&#x6210;&#x3057;&#x305F;&#x30CE;&#x30FC;&#x30C8;&#x30D6;&#x30C3;&#x30AF;&#x3067;&#x5B9F;&#x884C;&#x3059;&#x308B;</p>
+<ul>
+<li><code>ray-cluster.yaml</code>&#x306E;&#x5165;&#x624B;</li>
+</ul>
+<pre><code>!wget https://raw.githubusercontent.com/ray-project/ray/master/doc/kubernetes/ray-cluster.yaml
+</code></pre><pre><code>--2020-09-03 13:53:38--  https://raw.githubusercontent.com/ray-project/ray/master/doc/kubernetes/ray-cluster.yaml
+Resolving raw.githubusercontent.com (raw.githubusercontent.com)... 151.101.228.133
+Connecting to raw.githubusercontent.com (raw.githubusercontent.com)|151.101.228.133|:443... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: 4612 (4.5K) [text/plain]
+Saving to: &#x2018;ray-cluster.yaml&#x2019;
+
+ray-cluster.yaml  100%[===================&gt;]   4.50K  --.-KB/s    in 0s      
+
+2020-09-03 13:53:39 (39.0 MB/s) - &#x2018;ray-cluster.yaml&#x2019; saved [4612/4612]
+</code></pre><ul>
+<li><code>ray-cluster.yaml</code>&#x306E;&#x7DE8;&#x96C6;<ul>
+<li>&#x5DE6;&#x30D1;&#x30CD;&#x30EB;&#x304B;&#x3089;&#x30C0;&#x30A6;&#x30F3;&#x30ED;&#x30FC;&#x30C9;&#x3057;&#x305F;<code>ray-cluster.yaml</code>&#x3092;&#x9078;&#x629E;</li>
+<li><code>namespace: ray</code> &#x2192; <code>namespace: sNNNNNNN</code> &#x306B;&#x5909;&#x66F4;&#xFF08;&#x8907;&#x6570;&#x500B;&#x6240;&#x3042;&#x308A;&#x307E;&#x3059;&#xFF09;</li>
+</ul>
+</li>
+</ul>
+<h2 id="ray&#x30AF;&#x30E9;&#x30B9;&#x30BF;&#x30FC;&#x306E;&#x30C7;&#x30D7;&#x30ED;&#x30A4;">Ray&#x30AF;&#x30E9;&#x30B9;&#x30BF;&#x30FC;&#x306E;&#x30C7;&#x30D7;&#x30ED;&#x30A4;</h2>
+<ul>
+<li>&#x30C7;&#x30D7;&#x30ED;&#x30A4;</li>
+</ul>
+<pre><code>!kubectl apply -f ray-cluster.yaml
+</code></pre><pre><code>service/ray-head created
+deployment.apps/ray-head created
+deployment.apps/ray-worker created
+</code></pre><ul>
+<li>&#x78BA;&#x8A8D;<ul>
+<li><code>ray-head-xxxxxxx</code>&#x3092;&#x5F8C;&#x3067;&#x4F7F;&#x3046;</li>
+</ul>
+</li>
+</ul>
+<pre><code>!kubectl get pods
+</code></pre><pre><code>NAME                          READY   STATUS    RESTARTS   AGE
+ray-head-576698bcf-mzm5b      1/1     Running   0          11m
+ray-worker-6df9f4bdfd-2n7ch   1/1     Running   1          11m
+ray-worker-6df9f4bdfd-htg8b   1/1     Running   1          11m
+ray-worker-6df9f4bdfd-xx9rm   1/1     Running   1          11m
+</code></pre><h2 id="python&#x30D7;&#x30ED;&#x30B0;&#x30E9;&#x30E0;&#x306E;&#x6E96;&#x5099;&#x3068;&#x5B9F;&#x884C;">Python&#x30D7;&#x30ED;&#x30B0;&#x30E9;&#x30E0;&#x306E;&#x6E96;&#x5099;&#x3068;&#x5B9F;&#x884C;</h2>
+<ul>
+<li><code>example.py</code>&#x306E;&#x5165;&#x624B;</li>
+</ul>
+<pre><code>!wget https://raw.githubusercontent.com/ray-project/ray/master/doc/kubernetes/example.py
+</code></pre><pre><code>--2020-09-03 13:54:18--  https://raw.githubusercontent.com/ray-project/ray/master/doc/kubernetes/example.py
+Resolving raw.githubusercontent.com (raw.githubusercontent.com)... 151.101.228.133
+Connecting to raw.githubusercontent.com (raw.githubusercontent.com)|151.101.228.133|:443... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: 1498 (1.5K) [text/plain]
+Saving to: &#x2018;example.py&#x2019;
+
+example.py        100%[===================&gt;]   1.46K  --.-KB/s    in 0s      
+
+2020-09-03 13:54:18 (16.9 MB/s) - &#x2018;example.py&#x2019; saved [1498/1498]
+</code></pre><ul>
+<li><code>example.py</code>&#x306E;&#x30B3;&#x30D4;&#x30FC;</li>
+</ul>
+<pre><code>!kubectl cp example.py ray-head-576698bcf-mzm5b:/example.py
+</code></pre><ul>
+<li><code>example.py</code>&#x306E;&#x5B9F;&#x884C;</li>
+</ul>
+<pre><code>!kubectl exec ray-head-576698bcf-mzm5b -- python example.py
+</code></pre><pre><code>WARNING: Logging before InitGoogleLogging() is written to STDERR
+I0903 06:23:59.983279   140   140 global_state_accessor.cc:25] Redis server address = 10.233.59.119:6379, is test flag = 0
+I0903 06:23:59.984807   140   140 redis_client.cc:146] RedisClient connected.
+I0903 06:23:59.993295   140   140 redis_gcs_client.cc:84] RedisGcsClient Connected.
+I0903 06:23:59.994874   140   140 service_based_gcs_client.cc:195] Reconnected to GCS server: 10.233.111.47:36385
+I0903 06:23:59.995381   140   140 service_based_accessor.cc:92] Reestablishing subscription for job info.
+I0903 06:23:59.995404   140   140 service_based_accessor.cc:422] Reestablishing subscription for actor info.
+I0903 06:23:59.995415   140   140 service_based_accessor.cc:808] Reestablishing subscription for node info.
+I0903 06:23:59.995434   140   140 service_based_accessor.cc:1084] Reestablishing subscription for task info.
+I0903 06:23:59.995443   140   140 service_based_accessor.cc:1259] Reestablishing subscription for object locations.
+I0903 06:23:59.995451   140   140 service_based_accessor.cc:1370] Reestablishing subscription for worker failures.
+I0903 06:23:59.995469   140   140 service_based_gcs_client.cc:86] ServiceBasedGcsClient Connected.
+Iteration 0
+Counter({(&apos;ray-worker-6df9f4bdfd-htg8b&apos;, &apos;ray-head-576698bcf-mzm5b&apos;): 19, (&apos;ray-worker-6df9f4bdfd-2n7ch&apos;, &apos;ray-worker-6df9f4bdfd-htg8b&apos;): 18, (&apos;ray-worker-6df9f4bdfd-xx9rm&apos;, &apos;ray-worker-6df9f4bdfd-2n7ch&apos;): 16, (&apos;ray-head-576698bcf-mzm5b&apos;, &apos;ray-worker-6df9f4bdfd-xx9rm&apos;): 15, (&apos;ray-head-576698bcf-mzm5b&apos;, &apos;ray-head-576698bcf-mzm5b&apos;): 7, (&apos;ray-worker-6df9f4bdfd-xx9rm&apos;, &apos;ray-worker-6df9f4bdfd-xx9rm&apos;): 6, (&apos;ray-worker-6df9f4bdfd-2n7ch&apos;, &apos;ray-head-576698bcf-mzm5b&apos;): 4, (&apos;ray-worker-6df9f4bdfd-2n7ch&apos;, &apos;ray-worker-6df9f4bdfd-2n7ch&apos;): 4, (&apos;ray-worker-6df9f4bdfd-xx9rm&apos;, &apos;ray-head-576698bcf-mzm5b&apos;): 4, (&apos;ray-worker-6df9f4bdfd-htg8b&apos;, &apos;ray-worker-6df9f4bdfd-htg8b&apos;): 3, (&apos;ray-head-576698bcf-mzm5b&apos;, &apos;ray-worker-6df9f4bdfd-htg8b&apos;): 1, (&apos;ray-worker-6df9f4bdfd-xx9rm&apos;, &apos;ray-worker-6df9f4bdfd-htg8b&apos;): 1, (&apos;ray-head-576698bcf-mzm5b&apos;, &apos;ray-worker-6df9f4bdfd-2n7ch&apos;): 1, (&apos;ray-worker-6df9f4bdfd-htg8b&apos;, &apos;ray-worker-6df9f4bdfd-2n7ch&apos;): 1})
+Iteration 1
+Counter({(&apos;ray-worker-6df9f4bdfd-xx9rm&apos;, &apos;ray-worker-6df9f4bdfd-htg8b&apos;): 14, (&apos;ray-worker-6df9f4bdfd-htg8b&apos;, &apos;ray-worker-6df9f4bdfd-2n7ch&apos;): 11, (&apos;ray-worker-6df9f4bdfd-2n7ch&apos;, &apos;ray-worker-6df9f4bdfd-xx9rm&apos;): 10, (&apos;ray-worker-6df9f4bdfd-2n7ch&apos;, &apos;ray-worker-6df9f4bdfd-2n7ch&apos;): 8, (&apos;ray-head-576698bcf-mzm5b&apos;, &apos;ray-worker-6df9f4bdfd-xx9rm&apos;): 8, (&apos;ray-worker-6df9f4bdfd-htg8b&apos;, &apos;ray-head-576698bcf-mzm5b&apos;): 8, (&apos;ray-head-576698bcf-mzm5b&apos;, &apos;ray-head-576698bcf-mzm5b&apos;): 7, (&apos;ray-worker-6df9f4bdfd-xx9rm&apos;, &apos;ray-head-576698bcf-mzm5b&apos;): 6, (&apos;ray-head-576698bcf-mzm5b&apos;, &apos;ray-worker-6df9f4bdfd-htg8b&apos;): 5, (&apos;ray-worker-6df9f4bdfd-xx9rm&apos;, &apos;ray-worker-6df9f4bdfd-xx9rm&apos;): 5, (&apos;ray-head-576698bcf-mzm5b&apos;, &apos;ray-worker-6df9f4bdfd-2n7ch&apos;): 5, (&apos;ray-worker-6df9f4bdfd-2n7ch&apos;, &apos;ray-worker-6df9f4bdfd-htg8b&apos;): 5, (&apos;ray-worker-6df9f4bdfd-2n7ch&apos;, &apos;ray-head-576698bcf-mzm5b&apos;): 4, (&apos;ray-worker-6df9f4bdfd-htg8b&apos;, &apos;ray-worker-6df9f4bdfd-xx9rm&apos;): 2, (&apos;ray-worker-6df9f4bdfd-xx9rm&apos;, &apos;ray-worker-6df9f4bdfd-2n7ch&apos;): 1, (&apos;ray-worker-6df9f4bdfd-htg8b&apos;, &apos;ray-worker-6df9f4bdfd-htg8b&apos;): 1})
+Iteration 2
+Counter({(&apos;ray-worker-6df9f4bdfd-2n7ch&apos;, &apos;ray-head-576698bcf-mzm5b&apos;): 13, (&apos;ray-head-576698bcf-mzm5b&apos;, &apos;ray-head-576698bcf-mzm5b&apos;): 12, (&apos;ray-worker-6df9f4bdfd-htg8b&apos;, &apos;ray-worker-6df9f4bdfd-htg8b&apos;): 11, (&apos;ray-worker-6df9f4bdfd-2n7ch&apos;, &apos;ray-worker-6df9f4bdfd-2n7ch&apos;): 10, (&apos;ray-head-576698bcf-mzm5b&apos;, &apos;ray-worker-6df9f4bdfd-htg8b&apos;): 9, (&apos;ray-worker-6df9f4bdfd-xx9rm&apos;, &apos;ray-worker-6df9f4bdfd-xx9rm&apos;): 9, (&apos;ray-worker-6df9f4bdfd-xx9rm&apos;, &apos;ray-worker-6df9f4bdfd-2n7ch&apos;): 8, (&apos;ray-worker-6df9f4bdfd-htg8b&apos;, &apos;ray-worker-6df9f4bdfd-xx9rm&apos;): 8, (&apos;ray-head-576698bcf-mzm5b&apos;, &apos;ray-worker-6df9f4bdfd-xx9rm&apos;): 6, (&apos;ray-worker-6df9f4bdfd-xx9rm&apos;, &apos;ray-worker-6df9f4bdfd-htg8b&apos;): 3, (&apos;ray-worker-6df9f4bdfd-htg8b&apos;, &apos;ray-worker-6df9f4bdfd-2n7ch&apos;): 3, (&apos;ray-worker-6df9f4bdfd-xx9rm&apos;, &apos;ray-head-576698bcf-mzm5b&apos;): 3, (&apos;ray-head-576698bcf-mzm5b&apos;, &apos;ray-worker-6df9f4bdfd-2n7ch&apos;): 2, (&apos;ray-worker-6df9f4bdfd-htg8b&apos;, &apos;ray-head-576698bcf-mzm5b&apos;): 2, (&apos;ray-worker-6df9f4bdfd-2n7ch&apos;, &apos;ray-worker-6df9f4bdfd-xx9rm&apos;): 1})
+Iteration 3
+Counter({(&apos;ray-worker-6df9f4bdfd-htg8b&apos;, &apos;ray-worker-6df9f4bdfd-htg8b&apos;): 14, (&apos;ray-head-576698bcf-mzm5b&apos;, &apos;ray-worker-6df9f4bdfd-xx9rm&apos;): 13, (&apos;ray-worker-6df9f4bdfd-xx9rm&apos;, &apos;ray-worker-6df9f4bdfd-2n7ch&apos;): 13, (&apos;ray-worker-6df9f4bdfd-2n7ch&apos;, &apos;ray-head-576698bcf-mzm5b&apos;): 12, (&apos;ray-worker-6df9f4bdfd-htg8b&apos;, &apos;ray-worker-6df9f4bdfd-2n7ch&apos;): 8, (&apos;ray-worker-6df9f4bdfd-xx9rm&apos;, &apos;ray-head-576698bcf-mzm5b&apos;): 7, (&apos;ray-worker-6df9f4bdfd-2n7ch&apos;, &apos;ray-worker-6df9f4bdfd-xx9rm&apos;): 6, (&apos;ray-head-576698bcf-mzm5b&apos;, &apos;ray-worker-6df9f4bdfd-2n7ch&apos;): 5, (&apos;ray-head-576698bcf-mzm5b&apos;, &apos;ray-head-576698bcf-mzm5b&apos;): 4, (&apos;ray-worker-6df9f4bdfd-xx9rm&apos;, &apos;ray-worker-6df9f4bdfd-xx9rm&apos;): 4, (&apos;ray-worker-6df9f4bdfd-2n7ch&apos;, &apos;ray-worker-6df9f4bdfd-2n7ch&apos;): 3, (&apos;ray-worker-6df9f4bdfd-htg8b&apos;, &apos;ray-worker-6df9f4bdfd-xx9rm&apos;): 3, (&apos;ray-head-576698bcf-mzm5b&apos;, &apos;ray-worker-6df9f4bdfd-htg8b&apos;): 2, (&apos;ray-worker-6df9f4bdfd-2n7ch&apos;, &apos;ray-worker-6df9f4bdfd-htg8b&apos;): 2, (&apos;ray-worker-6df9f4bdfd-xx9rm&apos;, &apos;ray-worker-6df9f4bdfd-htg8b&apos;): 2, (&apos;ray-worker-6df9f4bdfd-htg8b&apos;, &apos;ray-head-576698bcf-mzm5b&apos;): 2})
+Iteration 4
+Counter({(&apos;ray-worker-6df9f4bdfd-htg8b&apos;, &apos;ray-worker-6df9f4bdfd-htg8b&apos;): 15, (&apos;ray-worker-6df9f4bdfd-xx9rm&apos;, &apos;ray-worker-6df9f4bdfd-2n7ch&apos;): 13, (&apos;ray-worker-6df9f4bdfd-2n7ch&apos;, &apos;ray-worker-6df9f4bdfd-xx9rm&apos;): 11, (&apos;ray-worker-6df9f4bdfd-2n7ch&apos;, &apos;ray-head-576698bcf-mzm5b&apos;): 10, (&apos;ray-head-576698bcf-mzm5b&apos;, &apos;ray-worker-6df9f4bdfd-xx9rm&apos;): 9, (&apos;ray-head-576698bcf-mzm5b&apos;, &apos;ray-head-576698bcf-mzm5b&apos;): 8, (&apos;ray-worker-6df9f4bdfd-xx9rm&apos;, &apos;ray-head-576698bcf-mzm5b&apos;): 6, (&apos;ray-head-576698bcf-mzm5b&apos;, &apos;ray-worker-6df9f4bdfd-2n7ch&apos;): 5, (&apos;ray-worker-6df9f4bdfd-htg8b&apos;, &apos;ray-head-576698bcf-mzm5b&apos;): 5, (&apos;ray-worker-6df9f4bdfd-htg8b&apos;, &apos;ray-worker-6df9f4bdfd-xx9rm&apos;): 5, (&apos;ray-worker-6df9f4bdfd-xx9rm&apos;, &apos;ray-worker-6df9f4bdfd-xx9rm&apos;): 4, (&apos;ray-worker-6df9f4bdfd-2n7ch&apos;, &apos;ray-worker-6df9f4bdfd-htg8b&apos;): 3, (&apos;ray-worker-6df9f4bdfd-2n7ch&apos;, &apos;ray-worker-6df9f4bdfd-2n7ch&apos;): 2, (&apos;ray-worker-6df9f4bdfd-xx9rm&apos;, &apos;ray-worker-6df9f4bdfd-htg8b&apos;): 2, (&apos;ray-worker-6df9f4bdfd-htg8b&apos;, &apos;ray-worker-6df9f4bdfd-2n7ch&apos;): 1, (&apos;ray-head-576698bcf-mzm5b&apos;, &apos;ray-worker-6df9f4bdfd-htg8b&apos;): 1})
+Iteration 5
+Counter({(&apos;ray-worker-6df9f4bdfd-2n7ch&apos;, &apos;ray-worker-6df9f4bdfd-2n7ch&apos;): 13, (&apos;ray-head-576698bcf-mzm5b&apos;, &apos;ray-worker-6df9f4bdfd-htg8b&apos;): 11, (&apos;ray-worker-6df9f4bdfd-xx9rm&apos;, &apos;ray-head-576698bcf-mzm5b&apos;): 10, (&apos;ray-worker-6df9f4bdfd-htg8b&apos;, &apos;ray-head-576698bcf-mzm5b&apos;): 8, (&apos;ray-head-576698bcf-mzm5b&apos;, &apos;ray-worker-6df9f4bdfd-xx9rm&apos;): 7, (&apos;ray-worker-6df9f4bdfd-htg8b&apos;, &apos;ray-worker-6df9f4bdfd-2n7ch&apos;): 7, (&apos;ray-worker-6df9f4bdfd-2n7ch&apos;, &apos;ray-worker-6df9f4bdfd-xx9rm&apos;): 7, (&apos;ray-worker-6df9f4bdfd-htg8b&apos;, &apos;ray-worker-6df9f4bdfd-htg8b&apos;): 6, (&apos;ray-head-576698bcf-mzm5b&apos;, &apos;ray-worker-6df9f4bdfd-2n7ch&apos;): 6, (&apos;ray-worker-6df9f4bdfd-htg8b&apos;, &apos;ray-worker-6df9f4bdfd-xx9rm&apos;): 6, (&apos;ray-worker-6df9f4bdfd-xx9rm&apos;, &apos;ray-worker-6df9f4bdfd-htg8b&apos;): 6, (&apos;ray-worker-6df9f4bdfd-xx9rm&apos;, &apos;ray-worker-6df9f4bdfd-xx9rm&apos;): 4, (&apos;ray-worker-6df9f4bdfd-xx9rm&apos;, &apos;ray-worker-6df9f4bdfd-2n7ch&apos;): 3, (&apos;ray-head-576698bcf-mzm5b&apos;, &apos;ray-head-576698bcf-mzm5b&apos;): 3, (&apos;ray-worker-6df9f4bdfd-2n7ch&apos;, &apos;ray-head-576698bcf-mzm5b&apos;): 2, (&apos;ray-worker-6df9f4bdfd-2n7ch&apos;, &apos;ray-worker-6df9f4bdfd-htg8b&apos;): 1})
+Iteration 6
+Counter({(&apos;ray-worker-6df9f4bdfd-xx9rm&apos;, &apos;ray-worker-6df9f4bdfd-2n7ch&apos;): 18, (&apos;ray-head-576698bcf-mzm5b&apos;, &apos;ray-worker-6df9f4bdfd-htg8b&apos;): 13, (&apos;ray-worker-6df9f4bdfd-2n7ch&apos;, &apos;ray-worker-6df9f4bdfd-xx9rm&apos;): 12, (&apos;ray-worker-6df9f4bdfd-2n7ch&apos;, &apos;ray-head-576698bcf-mzm5b&apos;): 10, (&apos;ray-worker-6df9f4bdfd-htg8b&apos;, &apos;ray-head-576698bcf-mzm5b&apos;): 9, (&apos;ray-worker-6df9f4bdfd-htg8b&apos;, &apos;ray-worker-6df9f4bdfd-htg8b&apos;): 7, (&apos;ray-head-576698bcf-mzm5b&apos;, &apos;ray-worker-6df9f4bdfd-xx9rm&apos;): 7, (&apos;ray-worker-6df9f4bdfd-htg8b&apos;, &apos;ray-worker-6df9f4bdfd-xx9rm&apos;): 5, (&apos;ray-worker-6df9f4bdfd-htg8b&apos;, &apos;ray-worker-6df9f4bdfd-2n7ch&apos;): 4, (&apos;ray-head-576698bcf-mzm5b&apos;, &apos;ray-worker-6df9f4bdfd-2n7ch&apos;): 3, (&apos;ray-worker-6df9f4bdfd-2n7ch&apos;, &apos;ray-worker-6df9f4bdfd-htg8b&apos;): 3, (&apos;ray-head-576698bcf-mzm5b&apos;, &apos;ray-head-576698bcf-mzm5b&apos;): 3, (&apos;ray-worker-6df9f4bdfd-xx9rm&apos;, &apos;ray-worker-6df9f4bdfd-htg8b&apos;): 3, (&apos;ray-worker-6df9f4bdfd-xx9rm&apos;, &apos;ray-head-576698bcf-mzm5b&apos;): 2, (&apos;ray-worker-6df9f4bdfd-2n7ch&apos;, &apos;ray-worker-6df9f4bdfd-2n7ch&apos;): 1})
+Iteration 7
+Counter({(&apos;ray-worker-6df9f4bdfd-htg8b&apos;, &apos;ray-head-576698bcf-mzm5b&apos;): 17, (&apos;ray-head-576698bcf-mzm5b&apos;, &apos;ray-worker-6df9f4bdfd-xx9rm&apos;): 16, (&apos;ray-worker-6df9f4bdfd-2n7ch&apos;, &apos;ray-worker-6df9f4bdfd-htg8b&apos;): 10, (&apos;ray-worker-6df9f4bdfd-xx9rm&apos;, &apos;ray-worker-6df9f4bdfd-2n7ch&apos;): 10, (&apos;ray-worker-6df9f4bdfd-2n7ch&apos;, &apos;ray-worker-6df9f4bdfd-2n7ch&apos;): 8, (&apos;ray-worker-6df9f4bdfd-htg8b&apos;, &apos;ray-worker-6df9f4bdfd-2n7ch&apos;): 7, (&apos;ray-head-576698bcf-mzm5b&apos;, &apos;ray-head-576698bcf-mzm5b&apos;): 6, (&apos;ray-head-576698bcf-mzm5b&apos;, &apos;ray-worker-6df9f4bdfd-htg8b&apos;): 5, (&apos;ray-worker-6df9f4bdfd-2n7ch&apos;, &apos;ray-worker-6df9f4bdfd-xx9rm&apos;): 5, (&apos;ray-worker-6df9f4bdfd-xx9rm&apos;, &apos;ray-worker-6df9f4bdfd-htg8b&apos;): 5, (&apos;ray-worker-6df9f4bdfd-xx9rm&apos;, &apos;ray-worker-6df9f4bdfd-xx9rm&apos;): 5, (&apos;ray-worker-6df9f4bdfd-htg8b&apos;, &apos;ray-worker-6df9f4bdfd-htg8b&apos;): 4, (&apos;ray-worker-6df9f4bdfd-htg8b&apos;, &apos;ray-worker-6df9f4bdfd-xx9rm&apos;): 1, (&apos;ray-worker-6df9f4bdfd-xx9rm&apos;, &apos;ray-head-576698bcf-mzm5b&apos;): 1})
+Iteration 8
+Counter({(&apos;ray-head-576698bcf-mzm5b&apos;, &apos;ray-worker-6df9f4bdfd-2n7ch&apos;): 17, (&apos;ray-worker-6df9f4bdfd-xx9rm&apos;, &apos;ray-worker-6df9f4bdfd-htg8b&apos;): 10, (&apos;ray-worker-6df9f4bdfd-htg8b&apos;, &apos;ray-head-576698bcf-mzm5b&apos;): 10, (&apos;ray-worker-6df9f4bdfd-xx9rm&apos;, &apos;ray-worker-6df9f4bdfd-xx9rm&apos;): 9, (&apos;ray-worker-6df9f4bdfd-2n7ch&apos;, &apos;ray-worker-6df9f4bdfd-htg8b&apos;): 8, (&apos;ray-worker-6df9f4bdfd-xx9rm&apos;, &apos;ray-worker-6df9f4bdfd-2n7ch&apos;): 5, (&apos;ray-head-576698bcf-mzm5b&apos;, &apos;ray-worker-6df9f4bdfd-htg8b&apos;): 5, (&apos;ray-worker-6df9f4bdfd-xx9rm&apos;, &apos;ray-head-576698bcf-mzm5b&apos;): 5, (&apos;ray-worker-6df9f4bdfd-2n7ch&apos;, &apos;ray-head-576698bcf-mzm5b&apos;): 5, (&apos;ray-worker-6df9f4bdfd-htg8b&apos;, &apos;ray-worker-6df9f4bdfd-2n7ch&apos;): 5, (&apos;ray-head-576698bcf-mzm5b&apos;, &apos;ray-head-576698bcf-mzm5b&apos;): 5, (&apos;ray-worker-6df9f4bdfd-2n7ch&apos;, &apos;ray-worker-6df9f4bdfd-xx9rm&apos;): 5, (&apos;ray-worker-6df9f4bdfd-htg8b&apos;, &apos;ray-worker-6df9f4bdfd-htg8b&apos;): 4, (&apos;ray-worker-6df9f4bdfd-htg8b&apos;, &apos;ray-worker-6df9f4bdfd-xx9rm&apos;): 3, (&apos;ray-head-576698bcf-mzm5b&apos;, &apos;ray-worker-6df9f4bdfd-xx9rm&apos;): 2, (&apos;ray-worker-6df9f4bdfd-2n7ch&apos;, &apos;ray-worker-6df9f4bdfd-2n7ch&apos;): 2})
+Iteration 9
+Counter({(&apos;ray-head-576698bcf-mzm5b&apos;, &apos;ray-worker-6df9f4bdfd-htg8b&apos;): 14, (&apos;ray-worker-6df9f4bdfd-2n7ch&apos;, &apos;ray-worker-6df9f4bdfd-2n7ch&apos;): 13, (&apos;ray-worker-6df9f4bdfd-xx9rm&apos;, &apos;ray-head-576698bcf-mzm5b&apos;): 10, (&apos;ray-worker-6df9f4bdfd-htg8b&apos;, &apos;ray-worker-6df9f4bdfd-xx9rm&apos;): 7, (&apos;ray-worker-6df9f4bdfd-xx9rm&apos;, &apos;ray-worker-6df9f4bdfd-xx9rm&apos;): 7, (&apos;ray-worker-6df9f4bdfd-htg8b&apos;, &apos;ray-worker-6df9f4bdfd-htg8b&apos;): 7, (&apos;ray-head-576698bcf-mzm5b&apos;, &apos;ray-head-576698bcf-mzm5b&apos;): 6, (&apos;ray-worker-6df9f4bdfd-2n7ch&apos;, &apos;ray-worker-6df9f4bdfd-xx9rm&apos;): 6, (&apos;ray-worker-6df9f4bdfd-htg8b&apos;, &apos;ray-worker-6df9f4bdfd-2n7ch&apos;): 6, (&apos;ray-worker-6df9f4bdfd-xx9rm&apos;, &apos;ray-worker-6df9f4bdfd-2n7ch&apos;): 6, (&apos;ray-head-576698bcf-mzm5b&apos;, &apos;ray-worker-6df9f4bdfd-2n7ch&apos;): 5, (&apos;ray-worker-6df9f4bdfd-2n7ch&apos;, &apos;ray-head-576698bcf-mzm5b&apos;): 4, (&apos;ray-worker-6df9f4bdfd-htg8b&apos;, &apos;ray-head-576698bcf-mzm5b&apos;): 4, (&apos;ray-head-576698bcf-mzm5b&apos;, &apos;ray-worker-6df9f4bdfd-xx9rm&apos;): 3, (&apos;ray-worker-6df9f4bdfd-2n7ch&apos;, &apos;ray-worker-6df9f4bdfd-htg8b&apos;): 1, (&apos;ray-worker-6df9f4bdfd-xx9rm&apos;, &apos;ray-worker-6df9f4bdfd-htg8b&apos;): 1})
+Success!
+</code></pre><h2 id="ray&#x30AF;&#x30E9;&#x30B9;&#x30BF;&#x30FC;&#x306E;&#x524A;&#x9664;">Ray&#x30AF;&#x30E9;&#x30B9;&#x30BF;&#x30FC;&#x306E;&#x524A;&#x9664;</h2>
+<pre><code>!kubectl delete -f ray-cluster.yaml
+</code></pre><pre><code>service &quot;ray-head&quot; deleted
+deployment.apps &quot;ray-head&quot; deleted
+deployment.apps &quot;ray-worker&quot; deleted
+</code></pre><h2 id="urls">URLs</h2>
+<ul>
+<li><a href="https://docs.ray.io/en/latest/cluster/kubernetes.html" target="_blank">https://docs.ray.io/en/latest/cluster/kubernetes.html</a></li>
+<li><a href="https://github.com/ray-project/ray/tree/master/doc/kubernetes" target="_blank">https://github.com/ray-project/ray/tree/master/doc/kubernetes</a></li>
+</ul>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="k8s-kibana.html" class="navigation navigation-prev " aria-label="Previous page: Kibana の利用">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="k8s-embedding.html" class="navigation navigation-next " aria-label="Next page: 分散表現の取得">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"Ray の利用","level":"1.4.2.3.1.6","depth":5,"next":{"title":"分散表現の取得","level":"1.4.2.3.1.7","depth":5,"path":"dev/k8s/k8s-embedding.md","ref":"dev/k8s/k8s-embedding.md","articles":[]},"previous":{"title":"Kibana の利用","level":"1.4.2.3.1.5","depth":5,"path":"dev/k8s/k8s-kibana.md","ref":"dev/k8s/k8s-kibana.md","articles":[]},"dir":"ltr"},"config":{"plugins":[],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"language":"ja","gitbook":"*"},"file":{"path":"dev/k8s/k8s-ray.md","mtime":"2020-09-19T11:33:35.423Z","type":"markdown"},"gitbook":{"version":"3.6.6","time":"2020-09-19T11:33:47.291Z"},"basePath":"../..","book":{"language":"ja"}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../../../gitbook/gitbook.js"></script>
+    <script src="../../../gitbook/theme.js"></script>
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
