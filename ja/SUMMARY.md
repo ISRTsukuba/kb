@@ -25,10 +25,20 @@
       - :warning: [Windows10 のインストール](dev/pc-win10.md)
     - 環境：ThinkPad E シリーズ・Ubuntu 18.04 LTS・US 配列
       - [Windows10 用 USB インストーラーの作成](dev/pc-win10-installer-on-ubuntu.md)
-  - 研究室クラスターの使い方
-    - :bulb: [研究室クラスターについて](dev/k8s/README.md)
+  - [研究室クラスターの使い方](dev/k8s/README.md)
+    - :bulb: [研究室クラスターについて](dev/k8s/README-notebook.md)
     - [研究室クラスターのファイルやデータについて](dev/k8s/README-data.md)
     - [目的別研究室クラスター使用手順](dev/k8s/README-index.md)
+      - 目的別手順
+        - [Jupyter Notebook Linux コマンド集](dev/k8s/k8s-linux-commands.md)
+        - [Jupyter Lab Terminal Linux コマンド集](dev/k8s/k8s-linux-commands-terminal.md)
+        - [MySQL データベースの利用](dev/k8s/k8s-mysql.md)
+        - [Elasticsearch の利用](dev/k8s/k8s-elasticsearch.md)
+        - [Kibana の利用](dev/k8s/k8s-kibana.md)
+        - [Ray の利用](dev/k8s/k8s-ray.md)
+        - [分散表現の取得](dev/k8s/k8s-embedding.md)
+        - [汎用言語表現モデルの利用](dev/k8s/k8s-transformers.md)
+        - [.NET 環境の利用](dev/k8s/k8s-dotnet.md)
   - Python と Jupyter Lab
     - [Python のインストール](dev/pc-python.md)
     - [Jupyter Lab の使い方](dev/pc-jupyterlab.md)
@@ -62,6 +72,29 @@
   - Azure Cognitive Services クライアント開発
     - [リソースの取得](dev/acs-resource.md)
     - [Bing 検索 API](dev/acs-bingwebsearch.md)
+  - [サーチエンジン開発](dev/searchengine/README.md)
+    - [Bing Search](dev/searchengine/README.md#bing-search)
+      - [システムのインストールと基本利用](dev/searchengine/bing/1-install.md)
+        - [多機能版APIクライアントサーバ](dev/acs-bingsearch-python.md)
+      - クライアント開発
+        - Web UI
+          - [Python](dev/searchengine/bing/2-client-python.md)
+        - チャットボット
+          - [Bot Framework](dev/searchengine/bing/2-client-bot.md)
+      - 研究室クラスターへのデプロイ
+        - [デプロイ](dev/searchengine/bing/3-k8s.md)
+    - [Lucene](dev/searchengine/README.md#lucene)
+      - [システムのインストールと基本利用](dev/searchengine/lucene/1-install.md)
+      - [ソースファイルのコンパイル](dev/searchengine/lucene/3-compile.md)
+      - 研究室クラスターでの開発
+        - [ソースファイルのコンパイル](dev/searchengine/lucene/3-compile-k8s.md)
+    - [Solr](dev/searchengine/README.md#solr)
+      - 研究室クラスターでの開発
+        - [ソースファイルのコンパイル](dev/searchengine/solr/3-compile-k8s.md)
+    - [Elastic Search](dev/searchengine/README.md#elasticsearch)
+      - [システムのインストールと基本利用](dev/searchengine/elasticsearch/1-install.md)
+    - [FESS](dev/searchengine/README.md#fess)
+    - [Anserini](dev/searchengine/README.md#anserini)
 - [FAQ](faq/faq-dev.md)
 - [ライフハック](lifehack/README.md)
 - [チェックリスト](check/README.md)

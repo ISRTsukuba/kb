@@ -1,9 +1,10 @@
-# Bing Web検索のUIクライアント（Pythonウェブアプリ）
+# Bing Web 検索の UI クライアント（Python ウェブアプリ）
 
 ## 準備
 
-- [APIクライアントサーバの構築](1-install.md)
+- [API クライアントサーバの構築](1-install.md)
   - http://localhost:5000/
+
 ```
 {
   "status": "Ready"
@@ -12,15 +13,17 @@
 
 ## 仮想環境の構築
 
-- [仮想環境を使ったPython開発](../../python-venv.md)の手順に従う
+- [仮想環境を使った Python 開発](../../python-venv.md)の手順に従う
 - `bing-search-ui`という仮想環境を構築
 - `requirements.txt`を新規作成
+
 ```
 flask
 ```
-- Pythonモジュールをインストール
 
-## UIクライアント
+- Python モジュールをインストール
+
+## UI クライアント
 
 ### フォルダ構成
 
@@ -36,7 +39,7 @@ bing-search-ui/
 ```
 
 - `app.py`
-  
+
 ```
 import urllib.request
 import json
@@ -70,7 +73,7 @@ if __name__ == "__main__":
 ```
 
 - `layout.html`
-  
+
 ```
 <!DOCTYPE html>
 <html lang="ja">
@@ -107,7 +110,7 @@ if __name__ == "__main__":
 ```
 {% extends "layout.html" %}
 {% block content %}
-{% with query = query, results = results %} 
+{% with query = query, results = results %}
   {% include "form.html" %}
   {% include "serp.html" %}
 {% endwith %}
@@ -137,12 +140,11 @@ if __name__ == "__main__":
 ### Web UI
 
 - http://localhost:5001
-  
 
 ## 発展のアイディア
 
-- `templates`フォルダ以下のhtmlファイルを編集して、Web UIの見た目を変えたり、Javascriptを使って動的な機能を導入する
-- [多機能版APIクライアントサーバ](../../acs-bingsearch-python.md)に切り替えて、UIからカテゴリー別検索ができるようにする
+- `templates`フォルダ以下の html ファイルを編集して、Web UI の見た目を変えたり、Javascript を使って動的な機能を導入する
+- [多機能版 API クライアントサーバ](../../acs-bingsearch-python.md)に切り替えて、UI からカテゴリー別検索ができるようにする
 
 ## URLs
 
