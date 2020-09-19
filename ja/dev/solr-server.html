@@ -1,0 +1,1325 @@
+
+<!DOCTYPE HTML>
+<html lang="ja" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>Solr サーバの開発 · HonKit</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="HonKit 3.6.6">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    
+    <link rel="prev" href="github-1.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="検索ワードを入力" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        <li class="header">目次</li>
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../onboarding/">
+            
+                <a href="../onboarding/">
+            
+                    
+                    オンボーディング
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="../onboarding/getting-started.html">
+            
+                <a href="../onboarding/getting-started.html">
+            
+                    
+                    研究室への配属が決まったら
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../research/">
+            
+                <a href="../research/">
+            
+                    
+                    研究スキル
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="../research/files-and-data.html">
+            
+                <a href="../research/files-and-data.html">
+            
+                    
+                    ファイルやデータの整理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="../research/time-management/a-week.html">
+            
+                <a href="../research/time-management/a-week.html">
+            
+                    
+                    １週間の流れ
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3" data-path="../research/time-management/phd.html">
+            
+                <a href="../research/time-management/phd.html">
+            
+                    
+                    博士後期課程
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4" data-path="../research/task-management/wbs.html">
+            
+                <a href="../research/task-management/wbs.html">
+            
+                    
+                    WBS（Work Breakdown Structure）
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.5" data-path="../research/presentation-with-marp.html">
+            
+                <a href="../research/presentation-with-marp.html">
+            
+                    
+                    Marp を使った発表スライドの作成
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.6" data-path="../research/writing-with-asciidoctor.html">
+            
+                <a href="../research/writing-with-asciidoctor.html">
+            
+                    
+                    Asciidoctor を使った論文執筆
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.7" data-path="../research/affinity-diagram.html">
+            
+                <a href="../research/affinity-diagram.html">
+            
+                    
+                    KJ 法による思考の整理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.8" data-path="../research/affinity-diagram-with-trello.html">
+            
+                <a href="../research/affinity-diagram-with-trello.html">
+            
+                    
+                    Trello を使った KJ 法
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    開発スキル
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" >
+            
+                <span>
+            
+                    
+                    PC の設定
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1.1" >
+            
+                <span>
+            
+                    
+                    環境：ThinkPad E シリーズ・Windows 10 Enterprise・US 配列
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1.1.1" data-path="pc-initial-setup.html">
+            
+                <a href="pc-initial-setup.html">
+            
+                    
+                    PC の初期設定
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.1.2" data-path="pc-advanced-settings.html">
+            
+                <a href="pc-advanced-settings.html">
+            
+                    
+                    PC の詳細設定
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.1.3" data-path="pc-essential-apps.html">
+            
+                <a href="pc-essential-apps.html">
+            
+                    
+                    必須アプリのインストール
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.1.4" data-path="pc-advanced-apps.html">
+            
+                <a href="pc-advanced-apps.html">
+            
+                    
+                    個別アプリのインストール
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.1.5" data-path="pc-uninstall.html">
+            
+                <a href="pc-uninstall.html">
+            
+                    
+                    アプリのアンインストール（削除）
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.1.6" data-path="pc-reset.html">
+            
+                <a href="pc-reset.html">
+            
+                    
+                    PC の初期化
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.1.7" data-path="pc-win10.html">
+            
+                <a href="pc-win10.html">
+            
+                    
+                    Windows10 のインストール
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.2" >
+            
+                <span>
+            
+                    
+                    環境：ThinkPad E シリーズ・Ubuntu 18.04 LTS・US 配列
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1.2.1" data-path="pc-win10-installer-on-ubuntu.html">
+            
+                <a href="pc-win10-installer-on-ubuntu.html">
+            
+                    
+                    Windows10 用 USB インストーラーの作成
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2" >
+            
+                <span>
+            
+                    
+                    研究室クラスターの使い方
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.2.1" data-path="k8s/">
+            
+                <a href="k8s/">
+            
+                    
+                    研究室クラスターについて
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.2" data-path="k8s/README-data.html">
+            
+                <a href="k8s/README-data.html">
+            
+                    
+                    研究室クラスターのファイルやデータについて
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.3" data-path="k8s/README-index.html">
+            
+                <a href="k8s/README-index.html">
+            
+                    
+                    目的別研究室クラスター使用手順
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3" >
+            
+                <span>
+            
+                    
+                    Python と Jupyter Lab
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.3.1" data-path="pc-python.html">
+            
+                <a href="pc-python.html">
+            
+                    
+                    Python のインストール
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3.2" data-path="pc-jupyterlab.html">
+            
+                <a href="pc-jupyterlab.html">
+            
+                    
+                    Jupyter Lab の使い方
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4" >
+            
+                <span>
+            
+                    
+                    仮想マシン
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.4.1" >
+            
+                <span>
+            
+                    
+                    必要台数：1 台の場合
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.4.1.1" data-path="../pc-wsl-2.md">
+            
+                <span>
+            
+                    
+                    Windows Subsystem for Linux 2 (dev/WSL-2)のインストール
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4.1.2" data-path="vm-install-apps.html">
+            
+                <a href="vm-install-apps.html">
+            
+                    
+                    仮想マシンにアプリをインストールする方法
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4.2" >
+            
+                <span>
+            
+                    
+                    必要台数：2 台以上の場合
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.4.2.1" data-path="pc-virtualbox-vagrant.html">
+            
+                <a href="pc-virtualbox-vagrant.html">
+            
+                    
+                    VirtualBox と Vagrant のインストール
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4.2.2" data-path="vm-ubuntu1804.html">
+            
+                <a href="vm-ubuntu1804.html">
+            
+                    
+                    Ubuntu 18.04 LTS を使った仮想マシンの作成
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4.2.3" data-path="vm-centos7.html">
+            
+                <a href="vm-centos7.html">
+            
+                    
+                    CentOS 7 を使った仮想マシンの作成
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4.2.4" data-path="vm-centos7-ek.html">
+            
+                <a href="vm-centos7-ek.html">
+            
+                    
+                    CentOS 7 + Elasticsearch + Kibana を持つ仮想マシンの作成
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4.2.5" data-path="vm-install-apps.html">
+            
+                <a href="vm-install-apps.html">
+            
+                    
+                    仮想マシンにアプリをインストールする方法
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.5" >
+            
+                <span>
+            
+                    
+                    チャットボット
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.5.1" data-path="pc-python.html">
+            
+                <a href="pc-python.html">
+            
+                    
+                    Python のインストール
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.5.2" data-path="pc-slack.html">
+            
+                <a href="pc-slack.html">
+            
+                    
+                    Slack のインストールと研究室ワークスペースへの参加
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.5.3" data-path="pc-ngrok.html">
+            
+                <a href="pc-ngrok.html">
+            
+                    
+                    grok のインストール
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.5.4" data-path="chatbot-slack-1.html">
+            
+                <a href="chatbot-slack-1.html">
+            
+                    
+                    チャットボットの開発
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.6" >
+            
+                <span>
+            
+                    
+                    ウェブクローラーの取り扱い
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.6.1" data-path="web-crawler.html">
+            
+                <a href="web-crawler.html">
+            
+                    
+                    ウェブクローラーとユーザエージェント
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.7" >
+            
+                <span>
+            
+                    
+                    ウェブアプリ開発と Heroku へのデプロイ
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.7.1" data-path="pc-git.html">
+            
+                <a href="pc-git.html">
+            
+                    
+                    Git のインストール
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.7.2" data-path="pc-python.html">
+            
+                <a href="pc-python.html">
+            
+                    
+                    Python のインストール
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.7.3" data-path="pc-postgresql.html">
+            
+                <a href="pc-postgresql.html">
+            
+                    
+                    PostgreSQL のインストール
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.7.4" data-path="webapp-flask.html">
+            
+                <a href="webapp-flask.html">
+            
+                    
+                    Flask を使ったウェブアプリ開発
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.7.5" data-path="pc-heroku.html">
+            
+                <a href="pc-heroku.html">
+            
+                    
+                    Heroku へのデプロイ
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.8" >
+            
+                <span>
+            
+                    
+                    Java アプリ開発環境
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.8.1" data-path="pc-java.html">
+            
+                <a href="pc-java.html">
+            
+                    
+                    Java と開発ツールのインストール
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.8.2" data-path="github-1.html">
+            
+                <a href="github-1.html">
+            
+                    
+                    GitHub を使った開発 1
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.4.8.3" data-path="solr-server.html">
+            
+                <a href="solr-server.html">
+            
+                    
+                    Solr サーバの開発
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.9" >
+            
+                <span>
+            
+                    
+                    Azure Cognitive Services クライアント開発
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.9.1" data-path="acs-resource.html">
+            
+                <a href="acs-resource.html">
+            
+                    
+                    リソースの取得
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.9.2" data-path="acs-bingwebsearch.html">
+            
+                <a href="acs-bingwebsearch.html">
+            
+                    
+                    Bing 検索 API
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="../faq/faq-dev.html">
+            
+                <a href="../faq/faq-dev.html">
+            
+                    
+                    FAQ
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="../lifehack/">
+            
+                <a href="../lifehack/">
+            
+                    
+                    ライフハック
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="../check/">
+            
+                <a href="../check/">
+            
+                    
+                    チェックリスト
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" data-path="../templates/">
+            
+                <a href="../templates/">
+            
+                    
+                    テンプレート
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.8.1" data-path="../templates/seminar-note.html">
+            
+                <a href="../templates/seminar-note.html">
+            
+                    
+                    ゼミノート
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.8.1.1" data-path="../templates/gantt-chart.html">
+            
+                <a href="../templates/gantt-chart.html">
+            
+                    
+                    ガントチャート
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.2" data-path="../templates/review-note.html">
+            
+                <a href="../templates/review-note.html">
+            
+                    
+                    文献レビューノート
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.3" data-path="../templates/lab-note.html">
+            
+                <a href="../templates/lab-note.html">
+            
+                    
+                    ラボノート
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.4" data-path="../templates/marp-lab/presentation.html">
+            
+                <a href="../templates/marp-lab/presentation.html">
+            
+                    
+                    プレゼンテーション
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.5" data-path="../templates/asciidoctor-thesis/">
+            
+                <a href="../templates/asciidoctor-thesis/">
+            
+                    
+                    卒論・修論原稿
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.6" data-path="../faq/">
+            
+                <a href="../faq/">
+            
+                    
+                    よくある質問
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://github.com/honkit/honkit" target="blank" class="gitbook-link">
+            HonKitで公開 
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >Solr サーバの開発</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="solr&#x30B5;&#x30FC;&#x30D0;&#x306E;&#x958B;&#x767A;">Solr&#x30B5;&#x30FC;&#x30D0;&#x306E;&#x958B;&#x767A;</h1>
+<p>Solr&#x30B5;&#x30FC;&#x30D0;&#x306E;&#x30BD;&#x30FC;&#x30B9;&#x30B3;&#x30FC;&#x30C9;&#x3092;&#x30D5;&#x30A9;&#x30FC;&#x30AF;&#x3057;&#x3066;&#x3001;&#x30B3;&#x30F3;&#x30D1;&#x30A4;&#x30EB;&#x3059;&#x308B;&#x624B;&#x9806;&#x3002;&#x30E9;&#x30F3;&#x30AF;&#x5B66;&#x7FD2;&#x6A5F;&#x80FD;&#x3092;ON&#x3059;&#x308B;&#x65B9;&#x6CD5;&#x3082;&#x8AAC;&#x660E;&#x3002;</p>
+<h2 id="&#x524D;&#x63D0;">&#x524D;&#x63D0;</h2>
+<ul>
+<li><a href="pc-java.html">Java&#x3068;&#x958B;&#x767A;&#x30C4;&#x30FC;&#x30EB;&#x306E;&#x30A4;&#x30F3;&#x30B9;&#x30C8;&#x30FC;&#x30EB;</a></li>
+<li><a href="github-1.html">GitHub&#x3092;&#x4F7F;&#x3063;&#x305F;&#x958B;&#x767A;1</a></li>
+</ul>
+<h2 id="&#x6240;&#x8981;&#x6642;&#x9593;">&#x6240;&#x8981;&#x6642;&#x9593;</h2>
+<ul>
+<li>1&#x6642;&#x9593;</li>
+</ul>
+<h2 id="&#x30D5;&#x30A9;&#x30FC;&#x30AF;&#x3068;&#x30AF;&#x30ED;&#x30FC;&#x30F3;">&#x30D5;&#x30A9;&#x30FC;&#x30AF;&#x3068;&#x30AF;&#x30ED;&#x30FC;&#x30F3;</h2>
+<ul>
+<li><a href="https://github.com/apache/lucene-solr" target="_blank">aparch/lucene-solr&#x306E;&#x30EC;&#x30DD;&#x30B8;&#x30C8;&#x30EA;</a>&#x306B;&#x3044;&#x304F;</li>
+<li><a href="github-1.html">GitHub&#x3092;&#x4F7F;&#x3063;&#x305F;&#x958B;&#x767A;1</a>&#x306E;&#x624B;&#x9806;&#x306B;&#x3057;&#x305F;&#x304C;&#x3063;&#x3066;&#x3001;&#x30EC;&#x30DD;&#x30B8;&#x30C8;&#x30EA;&#x3092;&#x30D5;&#x30A9;&#x30FC;&#x30AF;&#x3057;&#x3066;&#x3001;&#x624B;&#x5143;&#x306E;PC&#x306B;&#x30AF;&#x30ED;&#x30FC;&#x30F3;&#x3059;&#x308B;</li>
+</ul>
+<h2 id="&#x30BD;&#x30FC;&#x30B9;&#x30D5;&#x30A1;&#x30A4;&#x30EB;&#x306E;&#x30B3;&#x30F3;&#x30D1;&#x30A4;&#x30EB;">&#x30BD;&#x30FC;&#x30B9;&#x30D5;&#x30A1;&#x30A4;&#x30EB;&#x306E;&#x30B3;&#x30F3;&#x30D1;&#x30A4;&#x30EB;</h2>
+<p>&#x4EE5;&#x4E0B;&#x306F;&#x30AF;&#x30ED;&#x30FC;&#x30F3;&#x3057;&#x305F;&#x30EC;&#x30DD;&#x30B8;&#x30C8;&#x30EA;&#x30D5;&#x30A9;&#x30EB;&#x30C0;&#x3092;VSCode&#x3067;&#x958B;&#x3044;&#x3066;&#x3044;&#x308B;&#x3053;&#x3068;&#x3092;&#x524D;&#x63D0;&#x306B;&#x3057;&#x3066;&#x3044;&#x307E;&#x3059;&#x3002;</p>
+<ul>
+<li><code>releases/lucene-solr/8.6.0</code>&#x30D6;&#x30E9;&#x30F3;&#x30C1;&#x3092;&#x9078;&#x629E;</li>
+<li><code>Ctrl+Shift+` </code>&#x3067;VSCode&#x5185;&#x3067;&#x30BF;&#x30FC;&#x30DF;&#x30CA;&#x30EB;&#x3092;&#x8D77;&#x52D5;</li>
+<li>&#x4EE5;&#x4E0B;&#x306E;&#x30B3;&#x30DE;&#x30F3;&#x30C9;&#x3092;&#x5B9F;&#x884C;&#x3057;&#x3001;&#x30BD;&#x30FC;&#x30B9;&#x30B3;&#x30FC;&#x30C9;&#x5168;&#x4F53;&#x3092;&#x30B3;&#x30F3;&#x30D1;&#x30A4;&#x30EB;&#xFF08;:information_source: 15&#x5206;&#x3050;&#x3089;&#x3044;&#x304B;&#x304B;&#x308B;&#xFF09;<ul>
+<li>&#x30B3;&#x30F3;&#x30D1;&#x30A4;&#x30EB;&#x4E2D;&#x306F;&#x5927;&#x91CF;&#x306E;&#x30E1;&#x30C3;&#x30BB;&#x30FC;&#x30B8;&#x304C;&#x8868;&#x793A;&#x3055;&#x308C;&#x308B;&#x306E;&#x3067;&#x3001;<code>-p</code>&#x30AA;&#x30D7;&#x30B7;&#x30E7;&#x30F3;&#x3092;&#x8FFD;&#x52A0;&#x3057;&#x3066;&#x3001;&#x30A8;&#x30E9;&#x30FC;&#x3084;&#x8B66;&#x544A;&#x306E;&#x307F;&#x3092;&#x8868;&#x793A;&#x3059;&#x308B;&#x3088;&#x3046;&#x306B;&#x3057;&#x3066;&#x3044;&#x307E;&#x3059;&#x3002;</li>
+<li>&#x3088;&#x308A;&#x8A73;&#x7D30;&#x306A;&#x30E1;&#x30C3;&#x30BB;&#x30FC;&#x30B8;&#x3092;&#x898B;&#x305F;&#x3044;&#x5834;&#x5408;&#x306F;&#x3001;<code>-p</code>&#x30AA;&#x30D7;&#x30B7;&#x30E7;&#x30F3;&#x306A;&#x3057;&#x3067;&#x5B9F;&#x884C;&#x3057;&#x3066;&#x307F;&#x3066;&#x304F;&#x3060;&#x3055;&#x3044;<pre><code>PS C:\Home\sNNNNNNN\Workspace\GitHub\lucene-solr&gt; ant compile -p
+</code></pre></li>
+</ul>
+</li>
+<li><code>BUILD SUCCESS</code>&#x7B49;&#x306E;&#x30E1;&#x30C3;&#x30BB;&#x30FC;&#x30B8;&#x304C;&#x8868;&#x793A;&#x3055;&#x308C;&#x305F;&#x3089;&#x6210;&#x529F;&#x3067;&#x3059;</li>
+<li><code>solr</code>&#x30D5;&#x30A9;&#x30EB;&#x30C0;&#x306B;&#x79FB;&#x52D5;&#x3057;&#x3001;&#x4EE5;&#x4E0B;&#x306E;&#x30B3;&#x30DE;&#x30F3;&#x30C9;&#x3092;&#x5B9F;&#x884C;&#x3059;&#x308B;&#x3053;&#x3068;&#x3067;&#x3001;<code>solr</code>&#x306E;&#x30D0;&#x30A4;&#x30CA;&#x30EA;&#x30D5;&#x30A1;&#x30A4;&#x30EB;&#x3092;&#x751F;&#x6210;&#xFF08;:information_source: 5&#x5206;&#x3050;&#x3089;&#x3044;&#x304B;&#x304B;&#x308B;&#xFF09;<pre><code>PS C:\Home\sNNNNNNN\Workspace\GitHub\lucene-solr&gt; cd solr
+PS C:\Home\sNNNNNNN\Workspace\GitHub\lucene-solr\solr&gt; ant server -p
+</code></pre></li>
+<li><code>BUILD SUCCESS</code>&#x7B49;&#x306E;&#x30E1;&#x30C3;&#x30BB;&#x30FC;&#x30B8;&#x304C;&#x8868;&#x793A;&#x3055;&#x308C;&#x305F;&#x3089;&#x6210;&#x529F;&#x3067;&#x3059;</li>
+</ul>
+<h2 id="solr&#x306E;&#x5B9F;&#x884C;&#x3068;&#x505C;&#x6B62;"><code>Solr</code>&#x306E;&#x5B9F;&#x884C;&#x3068;&#x505C;&#x6B62;</h2>
+<ul>
+<li>&#x4EE5;&#x4E0B;&#x306E;&#x30B3;&#x30DE;&#x30F3;&#x30C9;&#x3092;&#x5B9F;&#x884C;&#x3057;&#x3001;&#x30B3;&#x30F3;&#x30D1;&#x30A4;&#x30EB;&#x3057;&#x305F;<code>solr</code>&#x3092;&#x8D77;&#x52D5;<pre><code>PS C:\Home\sNNNNNNN\Workspace\GitHub\lucene-solr\solr&gt; .\bin\solr.cmd start
+OpenJDK 64-Bit Server VM warning: JVM cannot use large page memory because it does not have enough privilege to lock pages in memory.Waiting up to 30 to see Solr running on port 8983
+Started Solr server on port 8983. Happy searching!
+</code></pre></li>
+<li><a href="http://localhost:8983/" target="_blank">http://localhost:8983/</a> &#x306B;&#x79FB;&#x52D5;&#x3057;&#x3001;<code>solr</code>&#x306E;&#x8D77;&#x52D5;&#x3092;&#x78BA;&#x8A8D;</li>
+<li><code>solr</code>&#x3092;&#x505C;&#x6B62;&#x3059;&#x308B;&#x5834;&#x5408;&#x306F;&#x3001;&#x4EE5;&#x4E0B;&#x306E;&#x30B3;&#x30DE;&#x30F3;&#x30C9;&#x3092;&#x5B9F;&#x884C;<pre><code>PS C:\Home\sNNNNNNN\Workspace\GitHub\lucene-solr\solr&gt; .\bin\solr.cmd stop -p 8983
+</code></pre></li>
+</ul>
+<h2 id="&#x30E9;&#x30F3;&#x30AF;&#x5B66;&#x7FD2;&#x6A5F;&#x80FD;&#x3092;on&#x306B;&#x3057;&#x305F;solr&#x306E;&#x8D77;&#x52D5;">&#x30E9;&#x30F3;&#x30AF;&#x5B66;&#x7FD2;&#x6A5F;&#x80FD;&#x3092;ON&#x306B;&#x3057;&#x305F;<code>solr</code>&#x306E;&#x8D77;&#x52D5;</h2>
+<ul>
+<li>&#x30E9;&#x30F3;&#x30AF;&#x5B66;&#x7FD2;&#x6A5F;&#x80FD;&#x3092;ON&#x306B;&#x3057;&#x3064;&#x3064;&#x3001;<code>techproducts</code>&#x3068;&#x3044;&#x3046;&#x30B5;&#x30F3;&#x30D7;&#x30EB;&#x30B3;&#x30FC;&#x30D1;&#x30B9;&#x3092;&#x7D22;&#x5F15;&#x4ED8;&#x3051;&#x3059;&#x308B;</li>
+<li>&#x8A73;&#x7D30;&#xFF1A;<a href="https://lucene.apache.org/solr/guide/8_6/learning-to-rank.html" target="_blank">https://lucene.apache.org/solr/guide/8_6/learning-to-rank.html</a></li>
+</ul>
+<pre><code>PS C:\Home\sNNNNNNN\Workspace\GitHub\lucene-solr\solr&gt; .\bin\solr.cmd start -e techproducts &quot;-Dsolr.ltr.enabled=true&quot;
+</code></pre><ul>
+<li><a href="http://localhost:8983/" target="_blank">http://localhost:8983/</a> &#x306B;&#x79FB;&#x52D5;&#x3057;&#x3001;<code>JVM</code>&#x306E;<code>Args</code>&#x306B;<code>-Dsolr.ltr.enabled=true</code>&#x304C;&#x8FFD;&#x52A0;&#x3055;&#x308C;&#x3066;&#x3044;&#x308B;&#x3053;&#x3068;&#x3092;&#x78BA;&#x8A8D;</li>
+</ul>
+<h2 id="&#x6A5F;&#x80FD;&#x306E;&#x5909;&#x66F4;&#x30FB;&#x8FFD;&#x52A0;">&#x6A5F;&#x80FD;&#x306E;&#x5909;&#x66F4;&#x30FB;&#x8FFD;&#x52A0;</h2>
+<ul>
+<li>&#x30BD;&#x30FC;&#x30B9;&#x30B3;&#x30FC;&#x30C9;&#x3092;&#x3088;&#x304F;&#x8AAD;&#x307F;&#x3001;&#x7406;&#x89E3;&#x3057;&#x3001;&#x5909;&#x66F4;&#x3092;&#x52A0;&#x3048;&#x308B;</li>
+<li>&#x30BD;&#x30FC;&#x30B9;&#x30B3;&#x30FC;&#x30C9;&#x3092;&#x30B3;&#x30F3;&#x30D1;&#x30A4;&#x30EB;&#x3059;&#x308B;</li>
+<li><code>Solr</code>&#x3092;&#x518D;&#x8D77;&#x52D5;&#x3057;&#x3001;&#x5909;&#x66F4;&#x5185;&#x5BB9;&#x3092;&#x30C6;&#x30B9;&#x30C8;&#x3059;&#x308B;</li>
+</ul>
+<h2 id="solr&#x306E;&#x8907;&#x6570;&#x30A4;&#x30F3;&#x30B9;&#x30BF;&#x30F3;&#x30B9;&#x306E;&#x8D77;&#x52D5;"><code>Solr</code>&#x306E;&#x8907;&#x6570;&#x30A4;&#x30F3;&#x30B9;&#x30BF;&#x30F3;&#x30B9;&#x306E;&#x8D77;&#x52D5;</h2>
+<p><code>Solr</code>&#x30B5;&#x30FC;&#x30D0;&#x306F;&#x3001;&#x8907;&#x6570;&#x306E;&#x30A4;&#x30F3;&#x30B9;&#x30BF;&#x30F3;&#x30B9;&#x3092;&#x540C;&#x6642;&#x8D77;&#x52D5;&#x3059;&#x308B;&#x3053;&#x3068;&#x304C;&#x3067;&#x304D;&#x307E;&#x3059;&#x3002;&#x5404;&#x30A4;&#x30F3;&#x30B9;&#x30BF;&#x30F3;&#x30B9;&#x306B;&#x306F;&#x7570;&#x306A;&#x308B;&#x30DD;&#x30FC;&#x30C8;&#x756A;&#x53F7;&#x3092;&#x6307;&#x5B9A;&#x3057;&#x307E;&#x3059;&#x3002;</p>
+<ul>
+<li>&#x30C7;&#x30D5;&#x30A9;&#x30EB;&#x30C8;&#x30B5;&#x30FC;&#x30D0;&#x306E;&#x8D77;&#x52D5;&#xFF08;&#x30DD;&#x30FC;&#x30C8;&#x756A;&#x53F7;&#xFF1A;<code>8983</code>&#xFF09;<pre><code>PS C:\Home\sNNNNNNN\Workspace\GitHub\lucene-solr\solr&gt; .\bin\solr.cmd start
+</code></pre></li>
+<li>&#x30E9;&#x30F3;&#x30AF;&#x5B66;&#x7FD2;&#x7528;&#x30B5;&#x30FC;&#x30D0;&#x306E;&#x8D77;&#x52D5;&#xFF08;&#x30DD;&#x30FC;&#x30C8;&#x756A;&#x53F7;&#xFF1A;<code>8984</code>&#xFF09;<pre><code>PS C:\Home\sNNNNNNN\Workspace\GitHub\lucene-solr\solr&gt; .\bin\solr.cmd start -e techproducts &quot;-Dsolr.ltr.enabled=true&quot; -p 8984
+</code></pre></li>
+<li>&#x30B5;&#x30FC;&#x30D0;&#x306E;&#x505C;&#x6B62;<pre><code>PS C:\Home\sNNNNNNN\Workspace\GitHub\lucene-solr\solr&gt; .\bin\solr.cmd stop -p 8983
+PS C:\Home\sNNNNNNN\Workspace\GitHub\lucene-solr\solr&gt; .\bin\solr.cmd stop -p 8984
+</code></pre></li>
+</ul>
+<h2 id="solr&#x30AF;&#x30E9;&#x30A4;&#x30A2;&#x30F3;&#x30C8;&#x306E;&#x958B;&#x767A;">Solr&#x30AF;&#x30E9;&#x30A4;&#x30A2;&#x30F3;&#x30C8;&#x306E;&#x958B;&#x767A;</h2>
+<ul>
+<li><a href="python-venv.md">Solr&#x30AF;&#x30E9;&#x30A4;&#x30A2;&#x30F3;&#x30C8;&#x306E;&#x958B;&#x767A;</a></li>
+</ul>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="github-1.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page: GitHub を使った開発 1">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"Solr サーバの開発","level":"1.4.8.3","depth":3,"next":{"title":"Azure Cognitive Services クライアント開発","level":"1.4.9","depth":2,"ref":"","articles":[{"title":"リソースの取得","level":"1.4.9.1","depth":3,"path":"dev/acs-resource.md","ref":"dev/acs-resource.md","articles":[]},{"title":"Bing 検索 API","level":"1.4.9.2","depth":3,"path":"dev/acs-bingwebsearch.md","ref":"dev/acs-bingwebsearch.md","articles":[]}]},"previous":{"title":"GitHub を使った開発 1","level":"1.4.8.2","depth":3,"path":"dev/github-1.md","ref":"dev/github-1.md","articles":[]},"dir":"ltr"},"config":{"plugins":[],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"language":"ja","gitbook":"*"},"file":{"path":"dev/solr-server.md","mtime":"2020-09-19T09:39:17.855Z","type":"markdown"},"gitbook":{"version":"3.6.6","time":"2020-09-19T09:39:24.540Z"},"basePath":"..","book":{"language":"ja"}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../../gitbook/gitbook.js"></script>
+    <script src="../../gitbook/theme.js"></script>
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

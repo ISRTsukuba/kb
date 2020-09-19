@@ -1,0 +1,1374 @@
+
+<!DOCTYPE HTML>
+<html lang="ja" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>GitHub を使った開発 1 · HonKit</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="HonKit 3.6.6">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="solr-server.html" />
+    
+    
+    <link rel="prev" href="pc-java.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="検索ワードを入力" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        <li class="header">目次</li>
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../onboarding/">
+            
+                <a href="../onboarding/">
+            
+                    
+                    オンボーディング
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="../onboarding/getting-started.html">
+            
+                <a href="../onboarding/getting-started.html">
+            
+                    
+                    研究室への配属が決まったら
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../research/">
+            
+                <a href="../research/">
+            
+                    
+                    研究スキル
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="../research/files-and-data.html">
+            
+                <a href="../research/files-and-data.html">
+            
+                    
+                    ファイルやデータの整理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="../research/time-management/a-week.html">
+            
+                <a href="../research/time-management/a-week.html">
+            
+                    
+                    １週間の流れ
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3" data-path="../research/time-management/phd.html">
+            
+                <a href="../research/time-management/phd.html">
+            
+                    
+                    博士後期課程
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4" data-path="../research/task-management/wbs.html">
+            
+                <a href="../research/task-management/wbs.html">
+            
+                    
+                    WBS（Work Breakdown Structure）
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.5" data-path="../research/presentation-with-marp.html">
+            
+                <a href="../research/presentation-with-marp.html">
+            
+                    
+                    Marp を使った発表スライドの作成
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.6" data-path="../research/writing-with-asciidoctor.html">
+            
+                <a href="../research/writing-with-asciidoctor.html">
+            
+                    
+                    Asciidoctor を使った論文執筆
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.7" data-path="../research/affinity-diagram.html">
+            
+                <a href="../research/affinity-diagram.html">
+            
+                    
+                    KJ 法による思考の整理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.8" data-path="../research/affinity-diagram-with-trello.html">
+            
+                <a href="../research/affinity-diagram-with-trello.html">
+            
+                    
+                    Trello を使った KJ 法
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    開発スキル
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" >
+            
+                <span>
+            
+                    
+                    PC の設定
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1.1" >
+            
+                <span>
+            
+                    
+                    環境：ThinkPad E シリーズ・Windows 10 Enterprise・US 配列
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1.1.1" data-path="pc-initial-setup.html">
+            
+                <a href="pc-initial-setup.html">
+            
+                    
+                    PC の初期設定
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.1.2" data-path="pc-advanced-settings.html">
+            
+                <a href="pc-advanced-settings.html">
+            
+                    
+                    PC の詳細設定
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.1.3" data-path="pc-essential-apps.html">
+            
+                <a href="pc-essential-apps.html">
+            
+                    
+                    必須アプリのインストール
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.1.4" data-path="pc-advanced-apps.html">
+            
+                <a href="pc-advanced-apps.html">
+            
+                    
+                    個別アプリのインストール
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.1.5" data-path="pc-uninstall.html">
+            
+                <a href="pc-uninstall.html">
+            
+                    
+                    アプリのアンインストール（削除）
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.1.6" data-path="pc-reset.html">
+            
+                <a href="pc-reset.html">
+            
+                    
+                    PC の初期化
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.1.7" data-path="pc-win10.html">
+            
+                <a href="pc-win10.html">
+            
+                    
+                    Windows10 のインストール
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.2" >
+            
+                <span>
+            
+                    
+                    環境：ThinkPad E シリーズ・Ubuntu 18.04 LTS・US 配列
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1.2.1" data-path="pc-win10-installer-on-ubuntu.html">
+            
+                <a href="pc-win10-installer-on-ubuntu.html">
+            
+                    
+                    Windows10 用 USB インストーラーの作成
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2" >
+            
+                <span>
+            
+                    
+                    研究室クラスターの使い方
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.2.1" data-path="k8s/">
+            
+                <a href="k8s/">
+            
+                    
+                    研究室クラスターについて
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.2" data-path="k8s/README-data.html">
+            
+                <a href="k8s/README-data.html">
+            
+                    
+                    研究室クラスターのファイルやデータについて
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.3" data-path="k8s/README-index.html">
+            
+                <a href="k8s/README-index.html">
+            
+                    
+                    目的別研究室クラスター使用手順
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3" >
+            
+                <span>
+            
+                    
+                    Python と Jupyter Lab
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.3.1" data-path="pc-python.html">
+            
+                <a href="pc-python.html">
+            
+                    
+                    Python のインストール
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3.2" data-path="pc-jupyterlab.html">
+            
+                <a href="pc-jupyterlab.html">
+            
+                    
+                    Jupyter Lab の使い方
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4" >
+            
+                <span>
+            
+                    
+                    仮想マシン
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.4.1" >
+            
+                <span>
+            
+                    
+                    必要台数：1 台の場合
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.4.1.1" data-path="../pc-wsl-2.md">
+            
+                <span>
+            
+                    
+                    Windows Subsystem for Linux 2 (dev/WSL-2)のインストール
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4.1.2" data-path="vm-install-apps.html">
+            
+                <a href="vm-install-apps.html">
+            
+                    
+                    仮想マシンにアプリをインストールする方法
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4.2" >
+            
+                <span>
+            
+                    
+                    必要台数：2 台以上の場合
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.4.2.1" data-path="pc-virtualbox-vagrant.html">
+            
+                <a href="pc-virtualbox-vagrant.html">
+            
+                    
+                    VirtualBox と Vagrant のインストール
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4.2.2" data-path="vm-ubuntu1804.html">
+            
+                <a href="vm-ubuntu1804.html">
+            
+                    
+                    Ubuntu 18.04 LTS を使った仮想マシンの作成
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4.2.3" data-path="vm-centos7.html">
+            
+                <a href="vm-centos7.html">
+            
+                    
+                    CentOS 7 を使った仮想マシンの作成
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4.2.4" data-path="vm-centos7-ek.html">
+            
+                <a href="vm-centos7-ek.html">
+            
+                    
+                    CentOS 7 + Elasticsearch + Kibana を持つ仮想マシンの作成
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4.2.5" data-path="vm-install-apps.html">
+            
+                <a href="vm-install-apps.html">
+            
+                    
+                    仮想マシンにアプリをインストールする方法
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.5" >
+            
+                <span>
+            
+                    
+                    チャットボット
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.5.1" data-path="pc-python.html">
+            
+                <a href="pc-python.html">
+            
+                    
+                    Python のインストール
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.5.2" data-path="pc-slack.html">
+            
+                <a href="pc-slack.html">
+            
+                    
+                    Slack のインストールと研究室ワークスペースへの参加
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.5.3" data-path="pc-ngrok.html">
+            
+                <a href="pc-ngrok.html">
+            
+                    
+                    grok のインストール
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.5.4" data-path="chatbot-slack-1.html">
+            
+                <a href="chatbot-slack-1.html">
+            
+                    
+                    チャットボットの開発
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.6" >
+            
+                <span>
+            
+                    
+                    ウェブクローラーの取り扱い
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.6.1" data-path="web-crawler.html">
+            
+                <a href="web-crawler.html">
+            
+                    
+                    ウェブクローラーとユーザエージェント
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.7" >
+            
+                <span>
+            
+                    
+                    ウェブアプリ開発と Heroku へのデプロイ
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.7.1" data-path="pc-git.html">
+            
+                <a href="pc-git.html">
+            
+                    
+                    Git のインストール
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.7.2" data-path="pc-python.html">
+            
+                <a href="pc-python.html">
+            
+                    
+                    Python のインストール
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.7.3" data-path="pc-postgresql.html">
+            
+                <a href="pc-postgresql.html">
+            
+                    
+                    PostgreSQL のインストール
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.7.4" data-path="webapp-flask.html">
+            
+                <a href="webapp-flask.html">
+            
+                    
+                    Flask を使ったウェブアプリ開発
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.7.5" data-path="pc-heroku.html">
+            
+                <a href="pc-heroku.html">
+            
+                    
+                    Heroku へのデプロイ
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.8" >
+            
+                <span>
+            
+                    
+                    Java アプリ開発環境
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.8.1" data-path="pc-java.html">
+            
+                <a href="pc-java.html">
+            
+                    
+                    Java と開発ツールのインストール
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.4.8.2" data-path="github-1.html">
+            
+                <a href="github-1.html">
+            
+                    
+                    GitHub を使った開発 1
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.8.3" data-path="solr-server.html">
+            
+                <a href="solr-server.html">
+            
+                    
+                    Solr サーバの開発
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.9" >
+            
+                <span>
+            
+                    
+                    Azure Cognitive Services クライアント開発
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.9.1" data-path="acs-resource.html">
+            
+                <a href="acs-resource.html">
+            
+                    
+                    リソースの取得
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.9.2" data-path="acs-bingwebsearch.html">
+            
+                <a href="acs-bingwebsearch.html">
+            
+                    
+                    Bing 検索 API
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="../faq/faq-dev.html">
+            
+                <a href="../faq/faq-dev.html">
+            
+                    
+                    FAQ
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="../lifehack/">
+            
+                <a href="../lifehack/">
+            
+                    
+                    ライフハック
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="../check/">
+            
+                <a href="../check/">
+            
+                    
+                    チェックリスト
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" data-path="../templates/">
+            
+                <a href="../templates/">
+            
+                    
+                    テンプレート
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.8.1" data-path="../templates/seminar-note.html">
+            
+                <a href="../templates/seminar-note.html">
+            
+                    
+                    ゼミノート
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.8.1.1" data-path="../templates/gantt-chart.html">
+            
+                <a href="../templates/gantt-chart.html">
+            
+                    
+                    ガントチャート
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.2" data-path="../templates/review-note.html">
+            
+                <a href="../templates/review-note.html">
+            
+                    
+                    文献レビューノート
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.3" data-path="../templates/lab-note.html">
+            
+                <a href="../templates/lab-note.html">
+            
+                    
+                    ラボノート
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.4" data-path="../templates/marp-lab/presentation.html">
+            
+                <a href="../templates/marp-lab/presentation.html">
+            
+                    
+                    プレゼンテーション
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.5" data-path="../templates/asciidoctor-thesis/">
+            
+                <a href="../templates/asciidoctor-thesis/">
+            
+                    
+                    卒論・修論原稿
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.6" data-path="../faq/">
+            
+                <a href="../faq/">
+            
+                    
+                    よくある質問
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://github.com/honkit/honkit" target="blank" class="gitbook-link">
+            HonKitで公開 
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >GitHub を使った開発 1</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="github&#x3092;&#x4F7F;&#x3063;&#x305F;&#x958B;&#x767A;1">GitHub&#x3092;&#x4F7F;&#x3063;&#x305F;&#x958B;&#x767A;1</h1>
+<p>GitHub&#x3067;&#x5165;&#x624B;&#x53EF;&#x80FD;&#x306A;&#x30BD;&#x30FC;&#x30B9;&#x30B3;&#x30FC;&#x30C9;&#x3092;&#x81EA;&#x5206;&#x306E;&#x30EC;&#x30DD;&#x30B8;&#x30C8;&#x30EA;&#x3068;&#x3057;&#x3066;&#x30A4;&#x30F3;&#x30DD;&#x30FC;&#x30C8;&#x3057;&#x3066;&#x3001;VSCode&#x3067;&#x7DE8;&#x96C6;&#x3059;&#x308B;&#x307E;&#x3067;&#x306E;&#x624B;&#x9806;&#x3002;<a href="https://github.com/hideojoho/kb/" target="_blank">&#x7814;&#x7A76;&#x5BA4;&#x30CA;&#x30EC;&#x30C3;&#x30B8;&#x30D9;&#x30FC;&#x30B9;</a>&#x3092;&#x4F8B;&#x306B;&#x8AAC;&#x660E;&#x3057;&#x307E;&#x3059;&#x3002;</p>
+<h2 id="&#x524D;&#x63D0;&#x6761;&#x4EF6;">&#x524D;&#x63D0;&#x6761;&#x4EF6;</h2>
+<ul>
+<li>GitHub&#x30A2;&#x30AB;&#x30A6;&#x30F3;&#x30C8;</li>
+<li><a href="pc-git.html">Git</a></li>
+<li><a href="pc-vscode.md">VSCode</a></li>
+</ul>
+<h2 id="&#x6240;&#x8981;&#x6642;&#x9593;">&#x6240;&#x8981;&#x6642;&#x9593;</h2>
+<ul>
+<li>30&#x5206;</li>
+</ul>
+<h2 id="&#x4F5C;&#x696D;&#x5834;&#x6240;&#x306E;&#x6E96;&#x5099;">&#x4F5C;&#x696D;&#x5834;&#x6240;&#x306E;&#x6E96;&#x5099;</h2>
+<ul>
+<li><a href="pc-workspace.md">&#x7B2C;2&#x4F5C;&#x696D;&#x30A8;&#x30EA;&#x30A2;</a>&#x306B;&#x3001;<code>GitHub</code>&#x30D5;&#x30A9;&#x30EB;&#x30C0;&#x3092;&#x4F5C;&#x6210;<ul>
+<li><code>C:\Home\sNNNNNNN\Workspace\GitHub</code></li>
+</ul>
+</li>
+</ul>
+<h2 id="&#x30EC;&#x30DD;&#x30B8;&#x30C8;&#x30EA;&#x306E;&#x30D5;&#x30A9;&#x30FC;&#x30AF;">&#x30EC;&#x30DD;&#x30B8;&#x30C8;&#x30EA;&#x306E;&#x30D5;&#x30A9;&#x30FC;&#x30AF;</h2>
+<p>GitHub&#x3067;&#x516C;&#x958B;&#x3055;&#x308C;&#x3066;&#x3044;&#x308B;&#x30BD;&#x30FC;&#x30B9;&#x30B3;&#x30FC;&#x30C9;&#x306F;&#x30EC;&#x30DD;&#x30B8;&#x30C8;&#x30EA;&#x3068;&#x3044;&#x3046;&#x5358;&#x4F4D;&#x3067;&#x69CB;&#x6210;&#x3055;&#x308C;&#x3066;&#x3044;&#x307E;&#x3059;&#x3002;
+&#x65E2;&#x5B58;&#x306E;&#x30BD;&#x30FC;&#x30B9;&#x30B3;&#x30FC;&#x30C9;&#x3092;&#x8D77;&#x70B9;&#x3068;&#x3057;&#x305F;&#x958B;&#x767A;&#x3092;&#x884C;&#x3046;&#x305F;&#x3081;&#x306B;&#x306F;&#x3001;&#x307E;&#x305A;&#x4ED6;&#x8005;&#x306E;&#x30A2;&#x30AB;&#x30A6;&#x30F3;&#x30C8;&#x304C;&#x7BA1;&#x7406;&#x3059;&#x308B;&#x30EC;&#x30DD;&#x30B8;&#x30C8;&#x30EA;&#x3092;
+&#x81EA;&#x5206;&#x306E;&#x30A2;&#x30AB;&#x30A6;&#x30F3;&#x30C8;&#x306B;&#x30A4;&#x30F3;&#x30DD;&#x30FC;&#x30C8;&#x3057;&#x307E;&#x3059;&#x3002;&#x3053;&#x308C;&#x3092;&#x300C;&#x30D5;&#x30A9;&#x30FC;&#x30AF;&#x3059;&#x308B;&#x300D;&#x3068;&#x3044;&#x3044;&#x307E;&#x3059;&#x3002;</p>
+<ul>
+<li><a href="https://github.com/hideojoho/kb/" target="_blank">&#x7814;&#x7A76;&#x5BA4;&#x30CA;&#x30EC;&#x30C3;&#x30B8;&#x30D9;&#x30FC;&#x30B9;&#x30EC;&#x30DD;&#x30B8;&#x30C8;&#x30EA;</a>&#x306B;&#x3044;&#x304F;</li>
+<li>&#x30DA;&#x30FC;&#x30B8;&#x53F3;&#x4E0A;&#x306E;&#x300C;Fork&#x300D;&#x30A2;&#x30A4;&#x30B3;&#x30F3;&#x3092;&#x9078;&#x629E;</li>
+<li><code>Where should we fork kb?</code>&#x3068;&#x805E;&#x304B;&#x308C;&#x305F;&#x3089;&#x3001;&#x81EA;&#x5206;&#x306E;GitHub&#x30A2;&#x30AB;&#x30A6;&#x30F3;&#x30C8;&#x3092;&#x9078;&#x629E;</li>
+<li>&#x81EA;&#x5206;&#x306E;&#x30A2;&#x30AB;&#x30A6;&#x30F3;&#x30C8;&#x306B;<code>kb</code>&#x3068;&#x3044;&#x3046;&#x540D;&#x306E;&#x30EC;&#x30DD;&#x30B8;&#x30C8;&#x30EA;&#x304C;&#x8FFD;&#x52A0;&#x3055;&#x308C;&#x305F;&#x3053;&#x3068;&#x3092;&#x78BA;&#x8A8D;<ul>
+<li>&#x30D5;&#x30A9;&#x30FC;&#x30AF;&#x4E0B;&#x30EC;&#x30DD;&#x30B8;&#x30C8;&#x30EA;&#x306F;&#x3001;&#x30EC;&#x30DD;&#x30B8;&#x30C8;&#x30EA;&#x540D;&#x306E;&#x4E0B;&#x306B;&#x5C0F;&#x3055;&#x304F;<code>forked from ...</code>&#x3068;&#x8868;&#x793A;&#x3055;&#x308C;&#x308B;</li>
+</ul>
+</li>
+</ul>
+<h2 id="&#x30D5;&#x30A9;&#x30FC;&#x30AF;&#x3057;&#x305F;&#x30EC;&#x30DD;&#x30B8;&#x30C8;&#x30EA;&#x306E;&#x30AF;&#x30ED;&#x30FC;&#x30F3;">&#x30D5;&#x30A9;&#x30FC;&#x30AF;&#x3057;&#x305F;&#x30EC;&#x30DD;&#x30B8;&#x30C8;&#x30EA;&#x306E;&#x30AF;&#x30ED;&#x30FC;&#x30F3;</h2>
+<ul>
+<li>&#x81EA;&#x5206;&#x306E;&#x30A2;&#x30AB;&#x30A6;&#x30F3;&#x30C8;&#x306B;&#x30D5;&#x30A9;&#x30FC;&#x30AF;&#x3057;&#x305F;&#x7814;&#x7A76;&#x5BA4;&#x30CA;&#x30EC;&#x30C3;&#x30B8;&#x30D9;&#x30FC;&#x30B9;&#x30EC;&#x30DD;&#x30B8;&#x30C8;&#x30EA;&#x306B;&#x3044;&#x304F;</li>
+<li>&#x753B;&#x9762;&#x53F3;&#x5074;&#x306B;&#x3042;&#x308B;<code>Code</code>&#x3068;&#x3044;&#x3046;&#x7DD1;&#x306E;&#x30DC;&#x30BF;&#x30F3;&#x3092;&#x9078;&#x629E;&#x3001;&#x8868;&#x793A;&#x3055;&#x308C;&#x308B;&#x30EC;&#x30DD;&#x30B8;&#x30C8;&#x30EA;URL&#x3092;&#x30B3;&#x30D4;&#x30FC;</li>
+<li>VSCode&#x3092;&#x8D77;&#x52D5;<ul>
+<li><code>Ctrl+Shift+P</code>&#x3067;&#x30B3;&#x30DE;&#x30F3;&#x30C9;&#x30D1;&#x30EC;&#x30C3;&#x30C8;&#x3092;&#x8868;&#x793A;&#x3057;&#x3001;<code>Git</code>&#x3068;&#x5165;&#x529B;&#x3057;&#x3001;<code>Git&#x30AF;&#x30ED;&#x30FC;&#x30F3;</code>&#x3092;&#x9078;&#x629E;</li>
+<li>&#x8868;&#x793A;&#x3055;&#x308C;&#x308B;&#x5165;&#x529B;&#x6B04;&#x306B;&#x3001;&#x30B3;&#x30D4;&#x30FC;&#x3057;&#x305F;&#x30EC;&#x30DD;&#x30B8;&#x30C8;&#x30EA;URL&#x3092;&#x30DA;&#x30FC;&#x30B9;&#x30C8;</li>
+<li>&#x4FDD;&#x5B58;&#x5148;&#x3092;&#x304D;&#x304B;&#x308C;&#x308B;&#x306E;&#x3067;&#x3001;&#x7B2C;2&#x4F5C;&#x696D;&#x30A8;&#x30EA;&#x30A2;&#x306B;&#x4F5C;&#x6210;&#x3057;&#x305F;<code>GitHub</code>&#x30D5;&#x30A9;&#x30EB;&#x30C0;&#x3092;&#x9078;&#x629E;</li>
+<li>&#x30EC;&#x30DD;&#x30B8;&#x30C8;&#x30EA;&#x306E;&#x30AF;&#x30ED;&#x30FC;&#x30F3;&#x304C;&#x59CB;&#x307E;&#x308B;</li>
+<li>&#x30EF;&#x30FC;&#x30AF;&#x30B9;&#x30DA;&#x30FC;&#x30B9;&#x3078;&#x306E;&#x8FFD;&#x52A0;&#x3092;&#x805E;&#x304B;&#x308C;&#x305F;&#x3089;&#x300C;&#x958B;&#x304F;&#x300D;&#x3042;&#x308B;&#x3044;&#x306F;&#x300C;&#x65B0;&#x3057;&#x3044;&#x30A6;&#x30A3;&#x30F3;&#x30C9;&#x30A6;&#x3067;&#x958B;&#x304F;&#x300D;&#x3092;&#x9078;&#x629E;</li>
+</ul>
+</li>
+</ul>
+<h2 id="vscode&#x3067;&#x306E;&#x30D6;&#x30E9;&#x30F3;&#x30C1;&#x306E;&#x9078;&#x629E;">VSCode&#x3067;&#x306E;&#x30D6;&#x30E9;&#x30F3;&#x30C1;&#x306E;&#x9078;&#x629E;</h2>
+<ul>
+<li>GitHub&#x306E;&#x30EC;&#x30DD;&#x30B8;&#x30C8;&#x30EA;&#x306B;&#x306F;&#x300C;&#x30D6;&#x30E9;&#x30F3;&#x30C1;&#x300D;&#x3068;&#x3044;&#x3046;&#x6982;&#x5FF5;&#x304C;&#x3042;&#x308A;&#x307E;&#x3059;&#x3002;&#x30C7;&#x30D5;&#x30A9;&#x30EB;&#x30C8;&#x306E;&#x30D6;&#x30E9;&#x30F3;&#x30C1;&#x306F;<code>master</code>&#x3067;&#x3059;&#x3002;</li>
+<li>&#x30D6;&#x30E9;&#x30F3;&#x30C1;&#x306E;&#x4F7F;&#x7528;&#x65B9;&#x6CD5;&#x306F;&#x30D7;&#x30ED;&#x30B8;&#x30A7;&#x30AF;&#x30C8;&#x306B;&#x3088;&#x308A;&#x3055;&#x307E;&#x3056;&#x307E;&#x3067;&#x3059;&#x3002;&#x7814;&#x7A76;&#x5BA4;&#x30CA;&#x30EC;&#x30C3;&#x30B8;&#x30D9;&#x30FC;&#x30B9;&#x3067;&#x306F;&#x3001;&#x65E5;&#x672C;&#x8A9E;&#x7248;&#xFF08;<code>ja</code>&#xFF09;&#x3068;&#x82F1;&#x8A9E;&#x7248;&#xFF08;<code>en</code>&#xFF09;&#x3067;&#x30D6;&#x30E9;&#x30F3;&#x30C1;&#x3092;&#x5206;&#x3051;&#x3066;&#x3044;&#x307E;&#x3059;&#x3002;</li>
+<li>&#x30AF;&#x30ED;&#x30FC;&#x30F3;&#x3057;&#x305F;&#x76F4;&#x5F8C;&#x3067;&#x306F;<code>master</code>&#x30D6;&#x30E9;&#x30F3;&#x30C1;&#x304C;&#x9078;&#x629E;&#x3055;&#x308C;&#x3066;&#x3044;&#x308B;&#x5834;&#x5408;&#x304C;&#x591A;&#x3044;&#x3068;&#x601D;&#x3044;&#x307E;&#x3059;&#x3002;VSCode&#x304C;&#x4F7F;&#x7528;&#x3057;&#x3066;&#x3044;&#x308B;&#x30D6;&#x30E9;&#x30F3;&#x30C1;&#x306F;&#x3001;&#x753B;&#x9762;&#x4E0B;&#x90E8;&#x306E;&#x5DE6;&#x7AEF;&#x306B;&#x5C0F;&#x3055;&#x304F;&#x8868;&#x793A;&#x3055;&#x308C;&#x3066;&#x3044;&#x307E;&#x3059;&#xFF08;&#x4F8B;&#xFF1A;<code>master</code>&#xFF09;</li>
+<li>&#x4F8B;&#x3048;&#x3070;&#x3001;&#x7814;&#x7A76;&#x5BA4;&#x30CA;&#x30EC;&#x30C3;&#x30B8;&#x30D9;&#x30FC;&#x30B9;&#x306E;&#x65E5;&#x672C;&#x8A9E;&#x30D6;&#x30E9;&#x30F3;&#x30C1;&#x306B;&#x7DE8;&#x96C6;&#x3092;&#x52A0;&#x3048;&#x305F;&#x3044;&#x5834;&#x5408;&#x306F;&#x3001;<code>master</code>&#x3092;&#x30AF;&#x30EA;&#x30C3;&#x30AF;&#x3057;&#x3066;&#x8868;&#x793A;&#x3055;&#x308C;&#x308B;&#x30D6;&#x30E9;&#x30F3;&#x30C1;&#x4E00;&#x89A7;&#x304B;&#x3089;<code>origin/ja</code>&#x3092;&#x9078;&#x629E;&#x3057;&#x307E;&#x3059;&#x3002;<ul>
+<li>VSCode&#x306E;&#x5DE6;&#x30D1;&#x30CD;&#x30EB;&#x306E;&#x30D5;&#x30A1;&#x30A4;&#x30EB;&#x4E00;&#x89A7;&#x304C;&#x66F4;&#x65B0;&#x3055;&#x308C;&#x3066;&#x3001;&#x65E5;&#x672C;&#x8A9E;&#x30D6;&#x30E9;&#x30F3;&#x30C1;&#x304C;&#x6301;&#x3064;&#x30D5;&#x30A9;&#x30EB;&#x30C0;&#x304C;&#x8868;&#x793A;&#x3055;&#x308C;&#x308B;</li>
+</ul>
+</li>
+<li>:bulb: &#x4E00;&#x5EA6;&#x9078;&#x629E;&#x3057;&#x305F;&#x30D6;&#x30E9;&#x30F3;&#x30C1;&#x306F;&#x6B21;&#x56DE;VSCode&#x3092;&#x8D77;&#x52D5;&#x3057;&#x305F;&#x969B;&#x3082;&#x7D99;&#x627F;&#x3055;&#x308C;&#x307E;&#x3059;&#x304C;&#x3001;&#x7DE8;&#x96C6;&#x3092;&#x884C;&#x3046;&#x969B;&#x306F;&#x3001;&#x81EA;&#x5206;&#x304C;&#x4F7F;&#x3063;&#x3066;&#x3044;&#x308B;&#x30D6;&#x30E9;&#x30F3;&#x30C1;&#x3092;&#x78BA;&#x8A8D;&#x3059;&#x308B;&#x7FD2;&#x6163;&#x3092;&#x3064;&#x3051;&#x307E;&#x3057;&#x3087;&#x3046;&#x3002;</li>
+</ul>
+<h2 id="&#x7DE8;&#x96C6;&#x5185;&#x5BB9;&#x306E;&#x30B3;&#x30DF;&#x30C3;&#x30C8;">&#x7DE8;&#x96C6;&#x5185;&#x5BB9;&#x306E;&#x30B3;&#x30DF;&#x30C3;&#x30C8;</h2>
+<ul>
+<li>&#x3067;&#x306F;&#x5B9F;&#x969B;&#x306B;&#x81EA;&#x5206;&#x7528;&#x306B;&#x30AF;&#x30ED;&#x30FC;&#x30F3;&#x3057;&#x305F;&#x7814;&#x7A76;&#x5BA4;&#x30CA;&#x30EC;&#x30C3;&#x30B8;&#x30D9;&#x30FC;&#x30B9;&#x306E;&#x65E5;&#x672C;&#x8A9E;&#x30D6;&#x30E9;&#x30F3;&#x30C1;&#x306B;&#x3042;&#x308B;&#x6587;&#x66F8;&#x3092;&#x7DE8;&#x96C6;&#x3057;&#x3066;&#x307F;&#x307E;&#x3057;&#x3087;&#x3046;</li>
+<li>VSCode&#x306E;&#x30D5;&#x30A1;&#x30A4;&#x30EB;&#x4E00;&#x89A7;&#x304B;&#x3089;<code>dev</code>&#x30D5;&#x30A9;&#x30EB;&#x30C0;&#x3092;&#x9078;&#x629E;&#x3001;&#x4E0A;&#x306E;&#x30A2;&#x30A4;&#x30B3;&#x30F3;&#x304B;&#x3089;&#x300C;&#x65B0;&#x3057;&#x3044;&#x30D5;&#x30A1;&#x30A4;&#x30EB;&#x300D;&#x3092;&#x30AF;&#x30EA;&#x30C3;&#x30AF;&#x3057;&#x3001;<code>my-first-file.md</code>&#x3068;&#x3044;&#x3046;&#x540D;&#x3067;&#x4FDD;&#x5B58;</li>
+<li><p>&#x30D5;&#x30A1;&#x30A4;&#x30EB;&#x304C;&#x65B0;&#x898F;&#x4F5C;&#x6210;&#x3055;&#x308C;&#x305F;&#x3089;&#x9069;&#x5F53;&#x306A;&#x5185;&#x5BB9;&#x3067;&#x7DE8;&#x96C6;&#x3057;&#x3001;&#x4FDD;&#x5B58;
+```</p>
+<h1 id="&#x306F;&#x3058;&#x3081;&#x3066;&#x306E;&#x30D5;&#x30A1;&#x30A4;&#x30EB;">&#x306F;&#x3058;&#x3081;&#x3066;&#x306E;&#x30D5;&#x30A1;&#x30A4;&#x30EB;</h1>
+</li>
+<li><p>&#x305F;&#x3060;&#x3044;&#x307E;GitHub&#x306E;&#x30C6;&#x30B9;&#x30C8;&#x4E2D;
+```</p>
+</li>
+<li>GitHub&#x304B;&#x3089;&#x30AF;&#x30ED;&#x30FC;&#x30F3;&#x3057;&#x305F;&#x30EC;&#x30DD;&#x30B8;&#x30C8;&#x30EA;&#x306B;&#x4E0E;&#x3048;&#x305F;&#x4F55;&#x3089;&#x304B;&#x306E;&#x5909;&#x66F4;&#xFF08;&#x30D5;&#x30A1;&#x30A4;&#x30EB;&#x306E;&#x65B0;&#x898F;&#x4F5C;&#x6210;&#x3001;&#x7DE8;&#x96C6;&#x3001;&#x524A;&#x9664;&#x3001;&#x540D;&#x524D;&#x5909;&#x66F4;&#x306A;&#x3069;&#xFF09;&#x306F;&#x3001;VSCode&#x306E;&#x5DE6;&#x7AEF;&#x306B;&#x3042;&#x308B;&#x300C;&#x30BD;&#x30FC;&#x30B9;&#x7BA1;&#x7406;&#x300D;&#x304B;&#x3089;&#x78BA;&#x8A8D;&#x3067;&#x304D;&#x307E;&#x3059;</li>
+<li>&#x4F8B;&#x3048;&#x3070;&#x3001;&#x4ECA;&#x56DE;&#x306E;&#x5834;&#x5408;&#x3001;<code>my-first-file.md</code>&#x3068;&#x3044;&#x3046;&#x30D5;&#x30A1;&#x30A4;&#x30EB;&#x304C;&#x300C;&#x5909;&#x66F4;&#x300D;&#x30E9;&#x30D9;&#x30EB;&#x306E;&#x4E0B;&#x306B;&#x8868;&#x793A;&#x3055;&#x308C;&#x307E;&#x3059;</li>
+<li>&#x30D5;&#x30A1;&#x30A4;&#x30EB;&#x540D;&#x306E;&#x6A2A;&#x306B;&#x8868;&#x793A;&#x3055;&#x308C;&#x308B;<code>+</code>&#x8A18;&#x53F7;&#x3092;&#x30AF;&#x30EA;&#x30C3;&#x30AF;&#x3059;&#x308B;&#x3068;&#x3001;&#x300C;&#x3053;&#x306E;&#x30D5;&#x30A1;&#x30A4;&#x30EB;&#x306B;&#x52A0;&#x3048;&#x305F;&#x5909;&#x66F4;&#x3092;&#x81EA;&#x5206;&#x306E;&#x30EC;&#x30DD;&#x30B8;&#x30C8;&#x30EA;&#x306B;&#x53CD;&#x6620;&#x3055;&#x305B;&#x308B;&#x5019;&#x88DC;&#x306B;&#x52A0;&#x3048;&#x300D;&#x307E;&#x3059;&#x3002;&#x3053;&#x308C;&#x3092;&#x300C;&#x30B9;&#x30C6;&#x30FC;&#x30B8;&#x3059;&#x308B;&#x300D;&#x3068;&#x547C;&#x3073;&#x307E;&#x3059;&#x3002;<ul>
+<li><code>my-first-file.md</code>&#x3092;&#x30B9;&#x30C6;&#x30FC;&#x30B8;&#x3057;&#x307E;&#x3057;&#x3087;&#x3046;</li>
+<li>&#x4ECA;&#x5EA6;&#x306F;&#x300C;&#x30B9;&#x30C6;&#x30FC;&#x30B8;&#x3055;&#x308C;&#x305F;&#x5909;&#x66F4;&#x300D;&#x3068;&#x3044;&#x3046;&#x30EA;&#x30B9;&#x30C8;&#x306B;<code>my-first-file.md</code>&#x304C;&#x79FB;&#x52D5;&#x3057;&#x307E;&#x3057;&#x305F;&#x3002;</li>
+<li>&#x30B9;&#x30C6;&#x30FC;&#x30B8;&#x30F3;&#x30B0;&#x306F;&#x5358;&#x306B;&#x300C;&#x5019;&#x88DC;&#x306B;&#x52A0;&#x3048;&#x308B;&#x300D;&#x3060;&#x3051;&#x3067;&#x3059;&#x306E;&#x3067;&#x3001;&#x5019;&#x88DC;&#x4E00;&#x89A7;&#x304B;&#x3089;&#x3044;&#x3064;&#x3067;&#x3082;&#x53D6;&#x308A;&#x6D88;&#x3059;&#x3053;&#x3068;&#x304C;&#x3067;&#x304D;&#x307E;&#x3059;&#x3002;&#x30D5;&#x30A1;&#x30A4;&#x30EB;&#x540D;&#x306E;&#x6A2A;&#x306B;&#x8868;&#x793A;&#x3055;&#x308C;&#x308B;<code>-</code>&#x8A18;&#x53F7;&#x3092;&#x9078;&#x629E;&#x3057;&#x3001;&#x5019;&#x88DC;&#x304B;&#x3089;&#x5916;&#x3057;&#x3066;&#x307F;&#x307E;&#x3057;&#x3087;&#x3046;</li>
+<li>&#x6B21;&#x306E;&#x30B9;&#x30C6;&#x30C3;&#x30D7;&#x306B;&#x884C;&#x304F;&#x524D;&#x306B;&#x3001;&#x3082;&#x3046;&#x4E00;&#x5EA6; <code>my-first-file.md</code>&#x3092;&#x30B9;&#x30C6;&#x30FC;&#x30B8;&#x3057;&#x3066;&#x304A;&#x3044;&#x3066;&#x304F;&#x3060;&#x3055;&#x3044;</li>
+</ul>
+</li>
+<li>&#x6B21;&#x306B;&#x5019;&#x88DC;&#x30D5;&#x30A1;&#x30A4;&#x30EB;&#x3092;&#x81EA;&#x5206;&#x306E;PC&#x306B;&#x30AF;&#x30ED;&#x30FC;&#x30F3;&#x3057;&#x305F;&#x30EC;&#x30DD;&#x30B8;&#x30C8;&#x30EA;&#x306B;&#x53CD;&#x6620;&#x3055;&#x305B;&#x307E;&#x3059;&#x3002;&#x3053;&#x308C;&#x3092;&#x300C;&#x30B3;&#x30DF;&#x30C3;&#x30C8;&#x3059;&#x308B;&#x300D;&#x3068;&#x547C;&#x3073;&#x307E;&#x3059;&#x3002;&#x30B3;&#x30DF;&#x30C3;&#x30C8;&#x306F;&#x30B9;&#x30C6;&#x30FC;&#x30B8;&#x3057;&#x305F;&#x30D5;&#x30A1;&#x30A4;&#x30EB;&#x3059;&#x3079;&#x3066;&#x3092;&#x53CD;&#x6620;&#x3055;&#x305B;&#x307E;&#x3059;&#x3002;&#x30B9;&#x30C6;&#x30FC;&#x30B8;&#x3057;&#x3066;&#x3044;&#x306A;&#x3044;&#x30D5;&#x30A1;&#x30A4;&#x30EB;&#x306F;&#x5BFE;&#x8C61;&#x5916;&#x3067;&#x3059;&#x3002;<ul>
+<li>&#x300C;&#x30E1;&#x30C3;&#x30BB;&#x30FC;&#x30B8;&#x300D;&#x306B;&#x5909;&#x5316;&#x306E;&#x5185;&#x5BB9;&#x3092;&#x7C21;&#x6F54;&#x306B;&#x5165;&#x529B;&#x3057;&#x307E;&#x3059;&#xFF08;&#x4F8B;&#xFF1A;<code>Initial commit</code>&#xFF09;</li>
+<li>&#x4E0A;&#x306E;&#x30C1;&#x30A7;&#x30C3;&#x30AF;&#x30A2;&#x30A4;&#x30B3;&#x30F3;&#x3092;&#x9078;&#x629E;<ul>
+<li>&#x300C;Git&#x306E;user.name&#x3068;user.email&#x3092;&#x78BA;&#x8A8D;&#x305B;&#x3088;&#x300D;&#x3068;&#x3044;&#x3046;&#x30C0;&#x30A4;&#x30A2;&#x30ED;&#x30B0;&#x304C;&#x8868;&#x793A;&#x3055;&#x308C;&#x305F;&#x3089;&#x3001;<a href="pc-git.html">Git&#x306E;&#x8A2D;&#x5B9A;</a>&#x3092;&#x3084;&#x308A;&#x76F4;&#x3057;&#x307E;&#x3057;&#x3087;&#x3046;</li>
+<li>&#x30A8;&#x30E9;&#x30FC;&#x304C;&#x51FA;&#x306A;&#x3051;&#x308C;&#x3070;&#x3001;&#x30B3;&#x30DF;&#x30C3;&#x30C8;&#x304C;&#x5B8C;&#x4E86;&#x3057;&#x3066;&#x3044;&#x307E;&#x3059;&#x3002;</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>&#x6700;&#x5F8C;&#x306B;&#x624B;&#x5143;&#x306E;&#x30EC;&#x30DD;&#x30B8;&#x30C8;&#x30EA;&#x306B;&#x30B3;&#x30DF;&#x30C3;&#x30C8;&#x3057;&#x305F;&#x5185;&#x5BB9;&#x3092;GitHub&#x30B5;&#x30A4;&#x30C8;&#x306E;&#x30EC;&#x30DD;&#x30B8;&#x30C8;&#x30EA;&#x306B;&#x9001;&#x308A;&#x307E;&#x3059;&#x3002;&#x3053;&#x308C;&#x3092;&#x300C;&#x30D7;&#x30C3;&#x30B7;&#x30E5;&#x3059;&#x308B;&#x300D;&#x3068;&#x8A00;&#x3044;&#x307E;&#x3059;&#x3002;<ul>
+<li>&#x30BD;&#x30FC;&#x30B9;&#x7BA1;&#x7406;&#x30D1;&#x30CD;&#x30EB;&#x306E;&#x4E0A;&#x90E8;&#x30A2;&#x30A4;&#x30B3;&#x30F3;&#x304B;&#x3089;<code>&#x30FB;&#x30FB;&#x30FB;</code>&#x3092;&#x9078;&#x629E; &#x2192; &#x300C;&#x30D7;&#x30C3;&#x30B7;&#x30E5;&#x300D;&#x3092;&#x9078;&#x629E;</li>
+<li>&#x3042;&#x308B;&#x3044;&#x306F;&#x753B;&#x9762;&#x4E0B;&#x90E8;&#x306E;&#x30D6;&#x30E9;&#x30F3;&#x30C1;&#x540D;&#x306E;&#x96A3;&#x306B;&#x3042;&#x308B;&#x21C5;&#x30E9;&#x30D9;&#x30EB;&#xFF08;&#x5909;&#x66F4;&#x3092;&#x540C;&#x671F;&#xFF09;&#x3092;&#x9078;&#x629E;</li>
+<li>&#x3053;&#x308C;&#x3067;&#x624B;&#x5143;&#x306E;&#x5909;&#x66F4;&#x304C;&#x81EA;&#x5206;&#x306E;&#x30A2;&#x30AB;&#x30A6;&#x30F3;&#x30C8;&#x306B;&#x30D5;&#x30A9;&#x30FC;&#x30AF;&#x3057;&#x305F;&#x30EC;&#x30DD;&#x30B8;&#x30C8;&#x30EA;&#x306B;&#x53CD;&#x6620;&#x3055;&#x308C;&#x307E;&#x3057;&#x305F;&#x3002;</li>
+</ul>
+</li>
+<li>&#x30D5;&#x30A9;&#x30FC;&#x30AF;&#x3057;&#x305F;&#x81EA;&#x5206;&#x306E;&#x30EC;&#x30DD;&#x30B8;&#x30C8;&#x30EA;&#x30DA;&#x30FC;&#x30B8;&#x306B;&#x884C;&#x3063;&#x3066;&#x3001;<code>ja</code>&#x30D6;&#x30E9;&#x30F3;&#x30C1;&#x3092;&#x9078;&#x629E;&#x3057;&#x3001;<code>dev</code>&#x30D5;&#x30A9;&#x30EB;&#x30C0;&#x306E;&#x4E0B;&#x306B;&#x3001;<code>my-first-file.md</code>&#x304C;&#x8FFD;&#x52A0;&#x305B;&#x3066;&#x3044;&#x308B;&#x3053;&#x3068;&#x3092;&#x78BA;&#x8A8D;&#x3057;&#x307E;&#x3057;&#x3087;&#x3046;<ul>
+<li>&#x30D6;&#x30E9;&#x30F3;&#x30C1;&#x306F;<code>Master</code>&#x3068;&#x66F8;&#x304B;&#x308C;&#x3066;&#x3044;&#x308B;&#x30DC;&#x30BF;&#x30F3;&#x3092;&#x30AF;&#x30EA;&#x30C3;&#x30AF;&#x3059;&#x308B;&#x3068;&#x9078;&#x629E;&#x3067;&#x304D;&#x307E;&#x3059;</li>
+</ul>
+</li>
+<li>&#x307E;&#x305F;&#x3001;<a href="https://github.com/hideojoho/kb/tree/ja" target="_blank">&#x7814;&#x7A76;&#x5BA4;&#x30CA;&#x30EC;&#x30C3;&#x30B8;&#x30D9;&#x30FC;&#x30B9;&#x306E;&#x65E5;&#x672C;&#x8A9E;&#x30D6;&#x30E9;&#x30F3;&#x30C1;</a>&#x306B;&#x884C;&#x3063;&#x3066;&#x3001;<code>dev</code>&#x30D5;&#x30A9;&#x30EB;&#x30C0;&#x306E;&#x4E0B;&#x306B;&#x3001;<code>my-first-file.md</code>&#x304C;&#x306A;&#x3044;&#x3053;&#x3068;&#x3092;&#x78BA;&#x8A8D;&#x3057;&#x307E;&#x3057;&#x3087;&#x3046;</li>
+</ul>
+<h2 id="&#x30D5;&#x30A9;&#x30FC;&#x30AF;-&#x2192;-&#x30B9;&#x30C6;&#x30FC;&#x30B8;-&#x2192;-&#x30B3;&#x30DF;&#x30C3;&#x30C8;-&#x2192;-&#x30D7;&#x30C3;&#x30B7;&#x30E5;">&#x30D5;&#x30A9;&#x30FC;&#x30AF; &#x2192; &#x30B9;&#x30C6;&#x30FC;&#x30B8; &#x2192; &#x30B3;&#x30DF;&#x30C3;&#x30C8; &#x2192; &#x30D7;&#x30C3;&#x30B7;&#x30E5;</h2>
+<ul>
+<li>&#x30D5;&#x30A9;&#x30FC;&#x30AF;&#x304B;&#x3089;&#x30D7;&#x30C3;&#x30B7;&#x30E5;&#x307E;&#x3067;&#x306E;&#x4F5C;&#x696D;&#x306F;&#x6163;&#x308C;&#x308B;&#x307E;&#x3067;&#x5C11;&#x3057;&#x5206;&#x304B;&#x308A;&#x3065;&#x3089;&#x304F;&#x3001;&#x7169;&#x308F;&#x3057;&#x304F;&#x611F;&#x3058;&#x308B;&#x3068;&#x601D;&#x3044;&#x307E;&#x3059;&#x3002;</li>
+<li>&#x30D5;&#x30A9;&#x30FC;&#x30AF;&#x306F;&#x4ED6;&#x30A2;&#x30AB;&#x30A6;&#x30F3;&#x30C8;&#x306E;&#x30EC;&#x30DD;&#x30B8;&#x30C8;&#x30EA;&#x3092;&#x81EA;&#x5206;&#x306E;&#x30A2;&#x30AB;&#x30A6;&#x30F3;&#x30C8;&#x306B;&#x30B3;&#x30D4;&#x30FC;&#x3059;&#x308B;&#x3053;&#x3068;&#x3067;&#x3001;&#x672C;&#x5BB6;&#x3092;&#x6C17;&#x306B;&#x305B;&#x305A;&#x306B;&#x81EA;&#x7531;&#x306B;&#x5909;&#x66F4;&#x3092;&#x52A0;&#x3048;&#x308B;&#x3088;&#x3046;&#x306B;&#x3059;&#x308B;&#x3082;&#x306E;&#x3067;&#x3059;&#x3002;</li>
+<li>&#x30B3;&#x30DF;&#x30C3;&#x30C8;&#x306F;1&#x3064;&#x306E;&#x5909;&#x66F4;&#x306E;&#x584A;&#x306B;&#x5BFE;&#x3057;&#x3066;&#x884C;&#x3044;&#x307E;&#x3059;&#x3002;&#x30B9;&#x30C6;&#x30FC;&#x30B8;&#x306F;&#x305D;&#x306E;&#x5909;&#x66F4;&#x306B;&#x95A2;&#x9023;&#x3059;&#x308B;&#x30D5;&#x30A1;&#x30A4;&#x30EB;&#x306E;&#x307F;&#x3092;&#x9078;&#x629E;&#x3057;&#x307E;&#x3059;&#x3002;&#x30D7;&#x30C3;&#x30B7;&#x30E5;&#x306F;&#x5909;&#x66F4;&#x5185;&#x5BB9;&#x3092;GitHub&#x306B;&#x9001;&#x308A;&#x307E;&#x3059;&#x3002;</li>
+<li>&#x300C;&#x6A5F;&#x80FD;A&#x306E;&#x5B9F;&#x88C5;&#x300D;&#x3068;&#x300C;&#x6A5F;&#x80FD;B&#x306E;&#x6539;&#x5584;&#x300D;&#x3068;&#x3044;&#x3046;&#x4E8C;&#x3064;&#x306E;&#x5909;&#x66F4;&#x306E;&#x584A;&#x3092;&#x5B9F;&#x884C;&#x3057;&#x305F;&#x5834;&#x5408;&#x3001;&#x4EE5;&#x4E0B;&#x306E;&#x3088;&#x3046;&#x306B;&#x30B9;&#x30C6;&#x30FC;&#x30B8;&#x3059;&#x308B;&#x30D5;&#x30A1;&#x30A4;&#x30EB;&#x3092;&#x9078;&#x629E;&#x3057;&#x3066;&#x30B3;&#x30DF;&#x30C3;&#x30C8;&#x3057;&#x307E;&#x3059;<ul>
+<li>&#x6A5F;&#x80FD;A&#x306E;&#x5B9F;&#x88C5;&#x306B;&#x95A2;&#x9023;&#x3059;&#x308B;&#x30D5;&#x30A1;&#x30A4;&#x30EB;&#x7FA4;&#x3092;&#x30B9;&#x30C6;&#x30FC;&#x30B8; &#x2192; &#x30B3;&#x30DF;&#x30C3;&#x30C8;</li>
+<li>&#x6A5F;&#x80FD;B&#x306E;&#x5B9F;&#x88C5;&#x306B;&#x95A2;&#x9023;&#x3059;&#x308B;&#x30D5;&#x30A1;&#x30A4;&#x30EB;&#x7FA4;&#x3092;&#x30B9;&#x30C6;&#x30FC;&#x30B8; &#x2192; &#x30B3;&#x30DF;&#x30C3;&#x30C8;</li>
+</ul>
+</li>
+<li>:bulb: &#x4E00;&#x65B9;&#x3067;&#x540C;&#x4E00;&#x30D5;&#x30A1;&#x30A4;&#x30EB;&#x304C;&#x8907;&#x6570;&#x306E;&#x30B3;&#x30DF;&#x30C3;&#x30C8;&#x306B;&#x307E;&#x305F;&#x304C;&#x308B;&#x53EF;&#x80FD;&#x6027;&#x3082;&#x3042;&#x308B;&#x306E;&#x3067;&#x3001;&#x4E00;&#x3064;&#x306E;&#x5909;&#x66F4;&#x306E;&#x584A;&#x304C;&#x5B8C;&#x4E86;&#x3057;&#x305F;&#x3089;&#x3001;&#x30B3;&#x30DF;&#x30C3;&#x30C8;&#x3059;&#x308B;&#x7FD2;&#x6163;&#x3092;&#x3064;&#x3051;&#x307E;&#x3057;&#x3087;&#x3046;<ul>
+<li>&#x30D5;&#x30A1;&#x30A4;&#x30EB;&#x306E;&#x30D0;&#x30C3;&#x30AF;&#x30A2;&#x30C3;&#x30D7;&#x3068;&#x3044;&#x3046;&#x610F;&#x5473;&#x3067;&#x3082;&#x3001;&#x4E00;&#x65E5;&#x306B;1&#x56DE;&#x306F;&#x30D7;&#x30C3;&#x30B7;&#x30E5;&#x3057;&#x3066;&#x304A;&#x304D;&#x307E;&#x3057;&#x3087;&#x3046;&#x3002;</li>
+</ul>
+</li>
+</ul>
+<h2 id="&#x30D7;&#x30EB;&#x30EA;&#x30AF;&#x30A8;&#x30B9;&#x30C8;">&#x30D7;&#x30EB;&#x30EA;&#x30AF;&#x30A8;&#x30B9;&#x30C8;</h2>
+<ul>
+<li><a href="github-2.md">GitHub&#x3092;&#x4F7F;&#x3063;&#x305F;&#x958B;&#x767A;2</a></li>
+</ul>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="pc-java.html" class="navigation navigation-prev " aria-label="Previous page: Java と開発ツールのインストール">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="solr-server.html" class="navigation navigation-next " aria-label="Next page: Solr サーバの開発">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"GitHub を使った開発 1","level":"1.4.8.2","depth":3,"next":{"title":"Solr サーバの開発","level":"1.4.8.3","depth":3,"path":"dev/solr-server.md","ref":"dev/solr-server.md","articles":[]},"previous":{"title":"Java と開発ツールのインストール","level":"1.4.8.1","depth":3,"path":"dev/pc-java.md","ref":"dev/pc-java.md","articles":[]},"dir":"ltr"},"config":{"plugins":[],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"language":"ja","gitbook":"*"},"file":{"path":"dev/github-1.md","mtime":"2020-09-19T09:39:17.851Z","type":"markdown"},"gitbook":{"version":"3.6.6","time":"2020-09-19T09:39:24.540Z"},"basePath":"..","book":{"language":"ja"}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../../gitbook/gitbook.js"></script>
+    <script src="../../gitbook/theme.js"></script>
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

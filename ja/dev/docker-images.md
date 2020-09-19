@@ -1,0 +1,169 @@
+# Dockerイメージの作成
+
+再利用可能なDockerイメージを作成し、Docker Hubに登録する方法
+
+## 所要時間
+
+- 1-2時間
+
+## 前提
+
+- WSL2
+- Docker for Windows
+- VSCode + Remote WSLプラグイン
+- Docker Hubアカウント（個人のDockerイメージを公開する場合のみ）
+
+## 手順
+
+- 作業フォルダとVSCodeの準備
+- ベースイメージの選定
+- Dockerイメージの構成と構築
+- Dockerイメージの確認・実行・削除
+- Docker Hubへの送信
+
+### 作業フォルダの作成
+
+- `C:\Users\アカウント名\Local\Docker`に`MyImage`というフォルダを新規作成
+  - これ以降、ファイルは全て`MyImage`に保存する
+  
+### VSCodeの準備
+
+- `MyImage`フォルダをVSCodeで開く
+- `Ctrl+Shift+P` → `wsl`と入力し、`Remote-WSL: Reopen Folder in Windows`を選択
+  - `Select dstro`: `Ubuntu 20-04`を選択
+  - ウインドウがリロードされて、左パネルのフォルダ名に`MYIMAGE [WSL:UBUNTU-20.04]`と表示されることを確認
+- ``Ctrl+Shift+` ``でVSCodeのターミナルを開き、Windowsの`PowerShell`ではなく、WSLのShellが起動していることを確認
+
+```
+$ uname -a
+Linux DESKTOP-34R6FTL 4.19.104-microsoft-standard #1 SMP Wed Feb 19 06:37:35 UTC 2020 x86_64 x86_64 x86_64 GNU/Linux
+```
+
+### ベースイメージの選定
+
+- 個々のDockerイメージは小さなLinuxバーチャルマシン（もしくはそのプロセス）なので、ベースとなるLinuxシステムを選定する
+- 選定するベースシステム（Linuxディストリビューション）によって、Pythonなどのパッケージをインストールするコマンドが異なる
+- 以下は[Docker公式の代表的なベースイメージ](https://hub.docker.com/search?q=&type=image&image_filter=official&category=os)からの抜粋
+
+|ベースシステム|特徴|インストールコマンド|Tag（サイズ）|
+|:--|:--|:--|:--|
+|[alpine](https://hub.docker.com/_/alpine)|小型ベースイメージ|`apk`|[latest (linux/amd64)](https://hub.docker.com/_/alpine?tab=tags&name=latest) (2.66MB)|
+|[amazonlinux](https://hub.docker.com/_/amazonlinux)|AWSのEC2で使用されているOS|`yum`|[latest (linux/amd64)](https://hub.docker.com/_/amazonlinux?tab=tags&page=1&name=latest) (54.83MB)|
+|[ubuntu](https://hub.docker.com/_/ubuntu)|Debianベースの代表的OS|`apt`|[20.04 (linux/amd64)](https://hub.docker.com/_/ubuntu?tab=tags&name=20.04) (27.27MB)|
+|[centos](https://hub.docker.com/_/centos)|RedHatベースの代表的OS|`yum`|[latest (linux/amd64)](https://hub.docker.com/_/centos?tab=tags&page=1&name=centos8) (71.4MB)|
+
+### サンプルDockerイメージ構成
+
+- 今回の以下の構成のDockerイメージを作成します。
+  - ベースOS: [Ubuntu 20.04](https://hub.docker.com/_/ubuntu?tab=tags&name=20.04)
+  - Python
+- `MyImage`にファイル`Dockerfile`を新規作成
+  - :bulb: `MAINTAINER <name>`記法は[廃止予定](http://docs.docker.jp/engine/reference/builder.html#maintainer)だそうです
+
+```
+# ベースイメージ
+FROM ubuntu:20.04
+# イメージ情報
+LABEL Maintainer="you@example.com"
+LABEL Version="1.0"
+LABEL Description="This a sample Dockerfile to learn how to make a Docker image."
+# パッケージの更新
+RUN apt update && apt -y upgrade
+# 開発系パッケージの一括インストール（任意）
+RUN apt install -y build-essential
+# Pythonとpipのインストール
+RUN apt install -y python3 python3-pip
+# 不要パッケージとキャッシュの削除
+RUN apt autoremove -y && apt clean
+```
+
+### Dockerイメージの構築
+
+- VSCodeのターミナル（WSL）で以下のコマンドを実行
+  - `myimage`: ユーザ名（任意、Docker Hub個人アカウント名、あるいは`joholab`）
+  - `ubuntu_py3`: イメージ名
+  - `20200712`: イメージのバージョンタグ（今回は日付を使用）
+  - `.`: `Dockerfile`の場所
+
+```
+$ docker build -t myimage/ubuntu-py3:20200712 .
+...
+...
+Successfully built 60f1a341a261
+Successfully tagged myimage/ubuntu-py3:20200712
+```
+
+### 作成したDockerイメージの確認
+
+- Dockerイメージには`IMAGE ID`が付与されます
+  - 今回の例：`60f1a341a261`
+
+```
+$ docker images
+REPOSITORY                   TAG                 IMAGE ID            CREATED             SIZE
+myimage/ubuntu-py3           20200712            60f1a341a261        33 seconds ago      391MB
+```
+
+### 作成したDockerイメージの実行
+
+- 今回作成したイメージは再利用可能なVMです
+- 使用するときはイメージのコピーを展開して実行します。この展開されたものを「コンテナ」と呼びます
+  - イメージ同様、コンテナにも`CONTAINER ID`が付与されます
+- （紛らわしいですが、今度は）`PowerShell`から以下のコマンドを実行して、Dockerイメージを実行
+  - `--name py3`: コンテナの名前
+
+```
+PS C:\Users\アカウント名> docker run -d -it --name py3 myimage/ubuntu-py3:20200712
+```
+
+- 展開したコンテナの確認
+
+```
+PS C:\Users\アカウント名> docker ps -a
+CONTAINER ID        IMAGE                           COMMAND                  CREATED             STATUS                           PORTS               NAMES
+3d95188a998b        myimage/ubuntu-py3:20200712   "/bin/bash"              13 minutes ago      Up 13 minutes                                        py3
+```
+
+- 展開したコンテナ（Ubuntu Linux + Python3）へのログインとPythonの確認
+
+```
+PS C:\Users\アカウント名> docker exec -it py3 bash
+root@3d95188a998b:/# which python3
+/usr/bin/python3
+root@3d95188a998b:/# python3 -V
+Python 3.8.2
+root@3d95188a998b:/# which pip3
+/usr/bin/pip3
+root@3d95188a998b:/# pip3 -V
+pip 20.0.2 from /usr/lib/python3/dist-packages/pip (python 3.8)
+```
+
+### Dockerイメージの削除（ホストPC）
+
+- VSCodeのターミナルから
+
+```
+$ docker rmi [IMAGE ID]
+```
+
+### DockerイメージのDocker Hubへの送信
+
+- 個人的なDockerイメージをDocker Hubに公開する場合は、Docker Hubアカウントを作成します
+- Dockerイメージ構築コマンドで、ユーザ名の部分で、アカウント名を指定する
+- VSCodeのターミナルから
+
+```
+$ docker push ユーザ名/イメージ名
+```
+
+- `hideojoho/ubuntu-py3`で作成したイメージを[Docker Hubに公開した例](https://hub.docker.com/repository/docker/hideojoho/ubuntu-py3)
+
+### 研究室用Dockerイメージを作成する際の注意点
+
+- ユーザ名：`joholab`
+- イメージ名：他のイメージと競合しないように、指導教員に相談してください
+- Docker Hubへの送信：指導教員に相談してください
+
+## URLs
+
+- http://docs.docker.jp/engine/userguide/dockerimages.html

@@ -1,0 +1,12 @@
+{
+  "name": "kb",
+  "version": "0.0.0",
+  "repository": "ssh://git@github.com/ISRTsukuba/kb.git",
+  "scripts": {
+    "build": "npx honkit build",
+    "serve": "npx honkit serve"
+  },
+  "devDependencies": {
+    "honkit": "^3.6.6"
+  }
+}
