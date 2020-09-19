@@ -1,0 +1,75 @@
+# ナレッジベース
+
+## 目次
+
+- [オンボーディング](onboarding/README.md)
+  - [研究室への配属が決まったら](onboarding/getting-started.md)
+- [研究スキル](research/README.md)
+  - [ファイルやデータの整理](research/files-and-data.md)
+  - [１週間の流れ](research/time-management/a-week.md)
+  - [博士後期課程](research/time-management/phd.md)
+  - [WBS（Work Breakdown Structure）](research/task-management/wbs.md)
+  - [Marp を使った発表スライドの作成](research/presentation-with-marp.md)
+  - [Asciidoctor を使った論文執筆](research/writing-with-asciidoctor.md)（卒論・修論）
+  - [KJ 法による思考の整理](research/affinity-diagram.md)
+  - [Trello を使った KJ 法](research/affinity-diagram-with-trello.md)
+- [開発スキル](dev/README.md)
+  - PC の設定
+    - 環境：ThinkPad E シリーズ・Windows 10 Enterprise・US 配列
+      - [PC の初期設定](dev/pc-initial-setup.md)
+      - [PC の詳細設定](dev/pc-advanced-settings.md)
+      - [必須アプリのインストール](dev/pc-essential-apps.md)
+      - [個別アプリのインストール](dev/pc-advanced-apps.md)
+      - [アプリのアンインストール（削除）](dev/pc-uninstall.md)
+      - :warning: [PC の初期化](dev/pc-reset.md)
+      - :warning: [Windows10 のインストール](dev/pc-win10.md)
+    - 環境：ThinkPad E シリーズ・Ubuntu 18.04 LTS・US 配列
+      - [Windows10 用 USB インストーラーの作成](dev/pc-win10-installer-on-ubuntu.md)
+  - 研究室クラスターの使い方
+    - :bulb: [研究室クラスターについて](dev/k8s/README.md)
+    - [研究室クラスターのファイルやデータについて](dev/k8s/README-data.md)
+    - [目的別研究室クラスター使用手順](dev/k8s/README-index.md)
+  - Python と Jupyter Lab
+    - [Python のインストール](dev/pc-python.md)
+    - [Jupyter Lab の使い方](dev/pc-jupyterlab.md)
+  - 仮想マシン
+    - 必要台数：1 台の場合
+      - [Windows Subsystem for Linux 2 (dev/WSL-2)のインストール](pc-wsl-2.md)
+      - [仮想マシンにアプリをインストールする方法](dev/vm-install-apps.md)
+    - 必要台数：2 台以上の場合
+      - [VirtualBox と Vagrant のインストール](dev/pc-virtualbox-vagrant.md)
+      - [Ubuntu 18.04 LTS を使った仮想マシンの作成](dev/vm-ubuntu1804.md)
+      - [CentOS 7 を使った仮想マシンの作成](dev/vm-centos7.md)
+      - [CentOS 7 + Elasticsearch + Kibana を持つ仮想マシンの作成](dev/vm-centos7-ek.md)
+      - [仮想マシンにアプリをインストールする方法](dev/vm-install-apps.md)
+  - チャットボット
+    - [Python のインストール](dev/pc-python.md)
+    - [Slack のインストールと研究室ワークスペースへの参加](dev/pc-slack.md)
+    - [grok のインストール](dev/pc-ngrok.md)
+    - [チャットボットの開発](dev/chatbot-slack-1.md)
+  - ウェブクローラーの取り扱い
+    - [ウェブクローラーとユーザエージェント](dev/web-crawler.md)
+  - ウェブアプリ開発と Heroku へのデプロイ
+    - [Git のインストール](dev/pc-git.md)
+    - [Python のインストール](dev/pc-python.md)
+    - [PostgreSQL のインストール](dev/pc-postgresql.md)
+    - [Flask を使ったウェブアプリ開発](dev/webapp-flask.md)
+    - [Heroku へのデプロイ](dev/pc-heroku.md)
+  - Java アプリ開発環境
+    - [Java と開発ツールのインストール](dev/pc-java.md)
+    - [GitHub を使った開発 1](dev/github-1.md)
+    - [Solr サーバの開発](dev/solr-server.md)
+  - Azure Cognitive Services クライアント開発
+    - [リソースの取得](dev/acs-resource.md)
+    - [Bing 検索 API](dev/acs-bingwebsearch.md)
+- [FAQ](faq/faq-dev.md)
+- [ライフハック](lifehack/README.md)
+- [チェックリスト](check/README.md)
+- [テンプレート](templates/README.md)
+  - [ゼミノート](templates/seminar-note.md)
+    - [ガントチャート](templates/gantt-chart.md)
+  - [文献レビューノート](templates/review-note.md)
+  - [ラボノート](templates/lab-note.md)
+  - [プレゼンテーション](templates/marp-lab/presentation.md)
+  - [卒論・修論原稿](templates/asciidoctor-thesis/README.md)
+  - [よくある質問](faq/README.md)
